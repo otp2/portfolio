@@ -1,6 +1,6 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import { useState, useRef, useId, useEffect } from "react";
+import { useState, useRef, useId, useEffect, forwardRef, useImperativeHandle } from "react";
 
 interface SlideData {
   title: string;
@@ -109,7 +109,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <article
-          className={`relative p-[2vmin] transition-opacity duration-1000 ease-in-out ${
+          className={`relative p-4 transition-opacity duration-1000 ease-in-out ${
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
@@ -160,7 +160,14 @@ interface CarouselProps {
   slides: SlideData[];
 }
 
-export function Carousel({ slides }: CarouselProps) {
+// Define handle type for ref
+export interface CarouselRef {
+  handlePreviousClick: () => void;
+  handleNextClick: () => void;
+}
+
+// Use forwardRef
+export const Carousel = forwardRef<CarouselRef, CarouselProps>(({ slides }, ref) => {
   const [current, setCurrent] = useState(0);
 
   const handlePreviousClick = () => {
@@ -172,6 +179,12 @@ export function Carousel({ slides }: CarouselProps) {
     const next = current + 1;
     setCurrent(next === slides.length ? 0 : next);
   };
+
+  // Expose handlers via useImperativeHandle
+  useImperativeHandle(ref, () => ({
+    handlePreviousClick,
+    handleNextClick,
+  }));
 
   const handleSlideClick = (index: number) => {
     if (current !== index) {
@@ -204,20 +217,9 @@ export function Carousel({ slides }: CarouselProps) {
           ))}
         </ul>
       </div>
-
-      <div className="flex mt-4">
-        <CarouselControl
-          type="previous"
-          title="Go to previous slide"
-          handleClick={handlePreviousClick}
-        />
-        
-        <CarouselControl
-          type="next"
-          title="Go to next slide"
-          handleClick={handleNextClick}
-        />
-      </div>
     </div>
   );
-}
+});
+
+// Add display name for DevTools
+Carousel.displayName = "Carousel";

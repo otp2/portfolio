@@ -7,21 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neofolioshadcnuikitcomalabaster:
-          "var(--neofolioshadcnuikitcomalabaster)",
-        neofolioshadcnuikitcomblack: "var(--neofolioshadcnuikitcomblack)",
-        "neofolioshadcnuikitcomcod-gray":
-          "var(--neofolioshadcnuikitcomcod-gray)",
-        "neofolioshadcnuikitcomdove-gray":
-          "var(--neofolioshadcnuikitcomdove-gray)",
-        neofolioshadcnuikitcommercury: "var(--neofolioshadcnuikitcommercury)",
-        neofolioshadcnuikitcomteak: "var(--neofolioshadcnuikitcomteak)",
-        "neofolioshadcnuikitcomteak-15": "var(--neofolioshadcnuikitcomteak-15)",
-        "neofolioshadcnuikitcomteak-30": "var(--neofolioshadcnuikitcomteak-30)",
-        "neofolioshadcnuikitcomteak-90": "var(--neofolioshadcnuikitcomteak-90)",
-        neofolioshadcnuikitcomwhite: "var(--neofolioshadcnuikitcomwhite)",
-        "neofolioshadcnuikitcomwild-sand":
-          "var(--neofolioshadcnuikitcomwild-sand)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,25 +42,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        "neofolio-shadcnuikit-com-nunito-bold":
-          "var(--neofolio-shadcnuikit-com-nunito-bold-font-family)",
-        "neofolio-shadcnuikit-com-nunito-medium":
-          "var(--neofolio-shadcnuikit-com-nunito-medium-font-family)",
-        "neofolio-shadcnuikit-com-nunito-medium-underline":
-          "var(--neofolio-shadcnuikit-com-nunito-medium-underline-font-family)",
-        "neofolio-shadcnuikit-com-nunito-regular":
-          "var(--neofolio-shadcnuikit-com-nunito-regular-font-family)",
-        "neofolio-shadcnuikit-com-semantic-heading-1":
-          "var(--neofolio-shadcnuikit-com-semantic-heading-1-font-family)",
-        "neofolio-shadcnuikit-com-semantic-heading-2":
-          "var(--neofolio-shadcnuikit-com-semantic-heading-2-font-family)",
-        "neofolio-shadcnuikit-com-semantic-heading-4":
-          "var(--neofolio-shadcnuikit-com-semantic-heading-4-font-family)",
-        "neofolio-shadcnuikit-com-semantic-heading-5":
-          "var(--neofolio-shadcnuikit-com-semantic-heading-5-font-family)",
-        "neofolio-shadcnuikit-com-semantic-link":
-          "var(--neofolio-shadcnuikit-com-semantic-link-font-family)",
         sans: [
+          'Figtree',
           "ui-sans-serif",
           "system-ui",
           "sans-serif",
@@ -84,6 +52,15 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
+        serif: [
+          'Brawler',
+          'ui-serif', 
+          'Georgia', 
+          'Cambria', 
+          '"Times New Roman"', 
+          'Times', 
+          'serif'
+        ]
       },
       borderRadius: {
         lg: "var(--radius)",

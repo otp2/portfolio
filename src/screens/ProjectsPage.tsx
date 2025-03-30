@@ -8,36 +8,36 @@ const allProjects = [
     title: "Modern E-commerce Platform",
     period: "2024 - 2025",
     image: "/figure---modern-e-commerce-platform.png",
-    url: "https://neofolio.shadcnuikit.com/projects/modern-ecommerce-platform",
+    url: "https://google.com",
   },
   {
     id: 2,
     title: "AI-Powered Analytics Dashboard",
     period: "2023 - 2024",
     image: "/figure---ai-powered-analytics-dashboard.png",
-    url: "https://neofolio.shadcnuikit.com/projects/ai-analytics-dashboard",
+    url: "https://google.com",
   },
   {
     id: 3,
     title: "Mobile Banking App",
     period: "2023 - 2025",
     image: "/figure---modern-e-commerce-platform.png", // Placeholder image
-    url: "https://neofolio.shadcnuikit.com/projects/mobile-banking-app",
+    url: "https://google.com",
   },
   {
     id: 4,
     title: "Real Estate Management System",
     period: "2022 - 2023",
     image: "/figure---ai-powered-analytics-dashboard.png", // Placeholder image
-    url: "https://neofolio.shadcnuikit.com/projects/real-estate-management",
+    url: "https://google.com",
   },
 ];
 
 export const ProjectsPage = () => {
   return (
-    <div className="p-8 max-w-[1000px] mx-auto">
-      <header className="mb-10">
-        <h1 className="text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Projects</h1>
+    <>
+      <header className="mt-8 mb-16">
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Projects</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
           Explore cutting-edge design innovations that transform ideas into reality
         </p>
@@ -71,6 +71,6 @@ export const ProjectsPage = () => {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };

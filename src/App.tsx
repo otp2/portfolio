@@ -4,7 +4,6 @@ import { HomePage } from "./screens/HomePage";
 import { ProjectsPage } from "./screens/ProjectsPage";
 import { AboutPage } from "./screens/AboutPage";
 import { ContactPage } from "./screens/ContactPage";
-import { DemoPage } from "./screens/DemoPage";
 import { BlogPage } from "./screens/BlogPage";
 import { BlogPostPage } from "./screens/BlogPostPage";
 import { Sidebar } from "./components/Sidebar";
@@ -16,6 +15,7 @@ export const App = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     if (isDarkMode) {
@@ -27,7 +27,7 @@ export const App = () => {
 
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 1280);
     };
     
     // Initial check
@@ -40,18 +40,18 @@ export const App = () => {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
+  useEffect(() => {
+    if (isMobile && isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.pathname, isMobile]);
+
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden bg-[#F5F5F5] dark:bg-[#262626]">
-      {/* ScrollToTop component for page navigation */}
       <ScrollToTop />
-      
-      {/* Sidebar - Hidden on mobile */}
-      <Sidebar 
-        isMobile={isMobile} 
-        isMenuOpen={isMenuOpen} 
-      />
+      <Sidebar isMobile={isMobile} isMenuOpen={isMenuOpen} />
 
-      {/* Mobile Menu Overlay */}
       {isMobile && isMenuOpen && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
@@ -59,47 +59,43 @@ export const App = () => {
         />
       )}
 
-      {/* Main Content with Seamless Background */}
-      <div className={`relative ${isMobile ? 'w-full px-4' : 'ml-52'}`}>
+      {/* Main Content with Seamless Background - Reverted Structure */}
+      <div className={`relative ${isMobile ? 'w-full px-4' : 'ml-52'}`}> 
         <div className={`absolute top-6 ${isMobile ? 'left-4 right-4 bottom-28' : 'left-6 right-6 bottom-28'} bg-[#FAFAFA] dark:bg-[#0A0A0A] rounded-3xl z-0`}></div>
-
-        <div className={`relative z-10 pt-6 pb-14 ${isMobile ? 'px-4' : 'px-6'} max-w-[1150px] mx-auto`}>
-          {/* Mobile Header */}
+        <div className={`relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16`}>
           {isMobile && (
             <MobileHeader 
               isMenuOpen={isMenuOpen} 
               setIsMenuOpen={setIsMenuOpen} 
             />
           )}
-
-          {/* Routes */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/demo" element={<DemoPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </div>
+      </div>
 
-        {/* Footer - Moved outside of content container */}
-        <footer className="relative z-10 w-full py-5 flex justify-between items-center max-w-[1150px] mx-auto px-6">
+      {/* Footer - Outside main content div */}
+      <footer className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
           <p className="text-xs text-neutral-400 dark:text-neutral-400">© 2025 Owen Pechous</p>
           <p className="text-xs text-neutral-400 dark:text-neutral-400">
             Frontend Developer
           </p>
-        </footer>
-      </div>
+      </footer>
 
-      {/* Theme Toggle - Only visible on desktop or when mobile menu is open */}
+      {/* Theme Toggle */}
       <div className={`fixed bottom-6 left-6 z-50 ${isMobile && !isMenuOpen ? 'hidden' : 'block'}`}>
         <ThemeToggle 
           isDarkMode={isDarkMode} 
           setIsDarkMode={setIsDarkMode}
         />
       </div>
+
     </div>
   );
 };

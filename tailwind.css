@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Brawler&family=Figtree:wght@400;700&display=swap');
 @tailwind components;
 @tailwind utilities;
 
@@ -5,75 +6,6 @@
   .all-\[unset\] {
     all: unset;
   }
-}
-
-:root {
-  --neofolio-shadcnuikit-com-nunito-bold-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-nunito-bold-font-size: 14px;
-  --neofolio-shadcnuikit-com-nunito-bold-font-style: normal;
-  --neofolio-shadcnuikit-com-nunito-bold-font-weight: 700;
-  --neofolio-shadcnuikit-com-nunito-bold-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-nunito-bold-line-height: 20px;
-  --neofolio-shadcnuikit-com-nunito-medium-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-nunito-medium-font-size: 16px;
-  --neofolio-shadcnuikit-com-nunito-medium-font-style: normal;
-  --neofolio-shadcnuikit-com-nunito-medium-font-weight: 500;
-  --neofolio-shadcnuikit-com-nunito-medium-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-nunito-medium-line-height: 16px;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-font-family: "Nunito",
-    Helvetica;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-font-size: 14px;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-font-style: normal;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-font-weight: 500;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-nunito-medium-underline-line-height: 20px;
-  --neofolio-shadcnuikit-com-nunito-regular-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-nunito-regular-font-size: 16px;
-  --neofolio-shadcnuikit-com-nunito-regular-font-style: normal;
-  --neofolio-shadcnuikit-com-nunito-regular-font-weight: 400;
-  --neofolio-shadcnuikit-com-nunito-regular-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-nunito-regular-line-height: 24px;
-  --neofolio-shadcnuikit-com-semantic-heading-1-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-semantic-heading-1-font-size: 20px;
-  --neofolio-shadcnuikit-com-semantic-heading-1-font-style: normal;
-  --neofolio-shadcnuikit-com-semantic-heading-1-font-weight: 600;
-  --neofolio-shadcnuikit-com-semantic-heading-1-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-semantic-heading-1-line-height: 28px;
-  --neofolio-shadcnuikit-com-semantic-heading-2-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-semantic-heading-2-font-size: 24px;
-  --neofolio-shadcnuikit-com-semantic-heading-2-font-style: normal;
-  --neofolio-shadcnuikit-com-semantic-heading-2-font-weight: 600;
-  --neofolio-shadcnuikit-com-semantic-heading-2-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-semantic-heading-2-line-height: 32px;
-  --neofolio-shadcnuikit-com-semantic-heading-4-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-semantic-heading-4-font-size: 24px;
-  --neofolio-shadcnuikit-com-semantic-heading-4-font-style: normal;
-  --neofolio-shadcnuikit-com-semantic-heading-4-font-weight: 500;
-  --neofolio-shadcnuikit-com-semantic-heading-4-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-semantic-heading-4-line-height: 32px;
-  --neofolio-shadcnuikit-com-semantic-heading-5-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-semantic-heading-5-font-size: 16px;
-  --neofolio-shadcnuikit-com-semantic-heading-5-font-style: normal;
-  --neofolio-shadcnuikit-com-semantic-heading-5-font-weight: 700;
-  --neofolio-shadcnuikit-com-semantic-heading-5-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-semantic-heading-5-line-height: 24px;
-  --neofolio-shadcnuikit-com-semantic-link-font-family: "Nunito", Helvetica;
-  --neofolio-shadcnuikit-com-semantic-link-font-size: 14px;
-  --neofolio-shadcnuikit-com-semantic-link-font-style: normal;
-  --neofolio-shadcnuikit-com-semantic-link-font-weight: 400;
-  --neofolio-shadcnuikit-com-semantic-link-letter-spacing: 0px;
-  --neofolio-shadcnuikit-com-semantic-link-line-height: 20px;
-  --neofolioshadcnuikitcomalabaster: rgba(250, 250, 250, 1);
-  --neofolioshadcnuikitcomblack: rgba(0, 0, 0, 1);
-  --neofolioshadcnuikitcomcod-gray: rgba(23, 23, 23, 1);
-  --neofolioshadcnuikitcomdove-gray: rgba(115, 115, 115, 1);
-  --neofolioshadcnuikitcommercury: rgba(229, 229, 229, 1);
-  --neofolioshadcnuikitcomteak: rgba(173, 156, 95, 1);
-  --neofolioshadcnuikitcomteak-15: rgba(173, 156, 95, 0.15);
-  --neofolioshadcnuikitcomteak-30: rgba(173, 156, 95, 0.3);
-  --neofolioshadcnuikitcomteak-90: rgba(173, 156, 95, 0.9);
-  --neofolioshadcnuikitcomwhite: rgba(255, 255, 255, 1);
-  --neofolioshadcnuikitcomwild-sand: rgba(245, 245, 245, 1);
 }
 
 @tailwind base;
@@ -146,15 +78,24 @@
 
     --radius: 0.5rem;
   }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply font-sans;
+  }
+
+  h1, h2 {
+    @apply font-serif;
+  }
+
+  h3, h4, h5, h6 {
+    @apply font-sans;
+  }
 }
 
 @layer base {
   * {
     @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

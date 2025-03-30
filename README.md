@@ -4,12 +4,13 @@ A modern, responsive portfolio website showcasing Owen Pechous's work as a Front
 
 ## Features
 
-- **Responsive Design**: Optimized for all device sizes from mobile to desktop
+- **Responsive Design**: Optimized for all device sizes (Mobile breakpoint adjusted to 1280px)
 - **Dark/Light Mode**: Toggle between dark and light themes
 - **Modern UI**: Clean, minimalist design with smooth animations
 - **Accessible**: Built with web accessibility in mind
 - **Project Showcase**: Highlights selected work with interactive elements
 - **Blog Section**: Displays recent articles
+- **Contact Form**: Integrated with Netlify for seamless submissions
 - **Contact Information**: Easy ways to get in touch
 
 ## Tech Stack
@@ -20,6 +21,7 @@ A modern, responsive portfolio website showcasing Owen Pechous's work as a Front
 - **Vite**: Next-generation frontend tooling for fast development
 - **React Router**: For page navigation and routing
 - **Lucide Icons**: Simple, clean SVG icons
+- **Google Fonts**: Using Figtree (sans-serif) and Brawler (serif)
 
 ## Running Locally
 
@@ -73,3 +75,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Email**: owenpechous@gmail.com
 - **Phone**: 630-841-1167
+- **LinkedIn**: [linkedin.com/in/opechous](https://www.linkedin.com/in/opechous/)
+- **GitHub**: [github.com/otp2](https://github.com/otp2)
+- **Twitter**: [x.com/otp33](https://x.com/otp33)

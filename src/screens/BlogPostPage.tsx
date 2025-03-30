@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, ArrowRightIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { ArrowLeftIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "../components/ui/button";
@@ -156,19 +156,21 @@ export const BlogPostPage = () => {
   // If post not found
   if (!post) {
     return (
-      <div className="p-8 max-w-[900px] mx-auto text-center">
-        <h1 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-6">Post not found</h1>
-        <Button onClick={() => navigate('/blog')}>
-          Return to Blog
-        </Button>
-      </div>
+      <>
+        <div className="mt-8 text-center">
+          <h1 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-6">Post not found</h1>
+          <Button onClick={() => navigate('/blog')}>
+            Return to Blog
+          </Button>
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="p-8 max-w-[750px] mx-auto">
+    <>
       {/* Breadcrumb navigation */}
-      <div className="mb-8">
+      <div className="mt-8 mb-16">
         <Link 
           to="/blog" 
           className="inline-flex items-center text-sm text-neutral-500 dark:text-neutral-400 hover:text-[#ad9c5f] dark:hover:text-[#ad9c5f]"
@@ -181,7 +183,7 @@ export const BlogPostPage = () => {
       {/* Article header */}
       <article className="mb-16">
         <header className="mb-8">
-          <h1 className="text-3xl font-semibold text-neutral-950 dark:text-white mb-4">{post.title}</h1>
+          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-4">{post.title}</h1>
           <div className="flex items-center text-sm text-neutral-500 dark:text-neutral-400">
             <span>{post.author}</span>
             <span className="mx-2">•</span>
@@ -315,6 +317,6 @@ export const BlogPostPage = () => {
           </a>
         </Button>
       </section>
-    </div>
+    </>
   );
 };

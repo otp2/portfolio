@@ -22,7 +22,10 @@ export const MobileHeader = ({ isMenuOpen, setIsMenuOpen }: MobileHeaderProps) =
       </div>
       <button 
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="p-2 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+        className="p-3 text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white"
+        aria-expanded={isMenuOpen}
+        aria-controls="mobile-sidebar"
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           {isMenuOpen ? (

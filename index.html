@@ -17,6 +17,13 @@
   </head>
   <body>
     <div id="app"></div>
+    <!-- Netlify Hidden Form for Detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    <!-- End Netlify Hidden Form -->
     <script type="module" src="./src/index.tsx"></script>
   </body>
 </html>

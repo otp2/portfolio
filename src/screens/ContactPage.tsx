@@ -1,7 +1,6 @@
 import { 
   MailIcon, 
-  PhoneIcon,
-  SendIcon
+  PhoneIcon
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { useState } from "react";
@@ -20,23 +19,26 @@ export const ContactPage = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage(null);
-    
+
+    const myForm = e.target as HTMLFormElement;
+    const formData = new FormData(myForm);
+
     try {
-      // This would be where you'd send the form data to a server
-      console.log('Form submitted:', formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
       setSubmitMessage({
         type: 'success',
         text: 'Message sent successfully! I will get back to you soon.'
       });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -44,6 +46,7 @@ export const ContactPage = () => {
         message: ''
       });
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitMessage({
         type: 'error',
         text: 'There was an error sending your message. Please try again.'
@@ -54,9 +57,9 @@ export const ContactPage = () => {
   };
 
   return (
-    <div className="p-8 max-w-[900px] mx-auto">
-      <header className="mb-10">
-        <h1 className="text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Contact</h1>
+    <>
+      <header className="mt-8 mb-10">
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Contact</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
           I'm always excited to collaborate on innovative and exciting projects!
         </p>
@@ -122,7 +125,19 @@ export const ContactPage = () => {
         <section>
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-6">Send a message</h2>
           
-          <form onSubmit={handleSubmit} className="space-y-5 bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-6">
+          <form 
+            onSubmit={handleSubmit} 
+            className="space-y-5 bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-6"
+            data-netlify="true"
+            name="contact"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <p hidden>
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
+
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
                 Name
@@ -198,6 +213,6 @@ export const ContactPage = () => {
           </form>
         </section>
       </div>
-    </div>
+    </>
   );
 };

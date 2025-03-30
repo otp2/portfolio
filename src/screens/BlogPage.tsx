@@ -61,17 +61,17 @@ const blogPosts = [
 
 export const BlogPage = () => {
   return (
-    <div className="p-8 max-w-[900px] mx-auto">
-      <header className="mb-10">
-        <h1 className="text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Blog</h1>
+    <>
+      <header className="mt-8 mb-16">
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Blog</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
           Explore cutting-edge design innovations that transform ideas into reality
         </p>
       </header>
 
-      <div className="space-y-16">
+      <div>
         {blogPosts.map((post) => (
-          <article key={post.id} className="border-b border-neutral-200 dark:border-[#222222] pb-14 last:border-0">
+          <article key={post.id} className="mb-16 last:mb-0">
             <div className="mb-4">
               <p className="text-sm text-neutral-500 dark:text-neutral-400">{post.date}</p>
             </div>
@@ -110,6 +110,6 @@ export const BlogPage = () => {
           </article>
         ))}
       </div>
-    </div>
+    </>
   );
 };

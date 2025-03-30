@@ -81,13 +81,13 @@ export const AboutPage = () => {
   };
 
   return (
-    <div className="p-8 max-w-[900px] mx-auto">
-      {/* About Header Section - Styled to match the image */}
-      <section className="mb-16">
+    <>
+      {/* About Header Section */}
+      <section className="mt-8 mb-16">
         <div className="flex flex-col md:flex-row gap-12 items-start mb-8">
           <div className="flex-1">
-            <h1 className="text-4xl font-bold text-neutral-950 dark:text-white mb-2">Hello! I'm Owen</h1>
-            <p className="text-2xl font-semibold text-[#ad9c5f] mb-6">Frontend Developer</p>
+            <h1 className="text-3xl sm:text-4xl font-bold text-neutral-950 dark:text-white mb-2">Hello! I'm Owen</h1>
+            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Frontend Developer</h2>
             
             <p className="text-gray-600 dark:text-neutral-400 text-base mb-6">
               Frontend developer and design system specialist with over 9 years of experience focusing on user experience and design systems to create user-centered designs in SaaS products. I specialize in building scalable and maintainable frontend architectures that deliver exceptional user experiences.
@@ -95,16 +95,14 @@ export const AboutPage = () => {
           </div>
           
           <div className="flex-shrink-0 md:w-[350px]">
-            {/* Placeholder for profile image */}
             <div className="w-full h-[350px] bg-neutral-200 dark:bg-neutral-800 rounded-lg">
-              {/* This is where the profile image would go */}
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="mb-24">
+      <section className="mb-16">
         <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-8">Services</h2>
 
         <div className="space-y-4">
@@ -127,13 +125,13 @@ export const AboutPage = () => {
       </section>
 
       {/* What Clients Say Section */}
-      <section className="mb-24">
+      <section className="mb-16">
         <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-8">What clients say</h2>
         <AnimatedTestimonials testimonials={testimonials} />
       </section>
 
       {/* Contact Section */}
-      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 mb-10 shadow-sm">
+      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 shadow-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
@@ -186,6 +184,6 @@ export const AboutPage = () => {
           </a>
         </Button>
       </section>
-    </div>
+    </>
   );
 };

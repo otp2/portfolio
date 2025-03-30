@@ -1,5 +1,6 @@
 import { 
-  ArrowRightIcon,
+  ArrowLeft,
+  ArrowRight,
   CodeIcon,
   ClipboardCopyIcon,
   MailIcon,
@@ -13,8 +14,8 @@ import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
-import { Carousel } from "../components/ui/carousel";
-import { useState } from "react";
+import { Carousel, CarouselRef } from "../components/ui/carousel";
+import { useState, useRef } from "react";
 
 // Data for projects
 const projects = [
@@ -23,14 +24,14 @@ const projects = [
     title: "Modern E-commerce Platform",
     period: "2024 - 2025",
     image: "/figure---modern-e-commerce-platform.png",
-    url: "https://neofolio.shadcnuikit.com/projects/modern-ecommerce-platform",
+    url: "https://google.com",
   },
   {
     id: 2,
     title: "AI-Powered Analytics Dashboard",
     period: "2023 - 2024",
     image: "/figure---ai-powered-analytics-dashboard.png",
-    url: "https://neofolio.shadcnuikit.com/projects/ai-analytics-dashboard",
+    url: "https://google.com",
   },
 ];
 
@@ -45,20 +46,20 @@ const carouselSlides = projects.map(project => ({
 
 // Add two more slides to showcase more work
 const extendedCarouselSlides = [
-  ...carouselSlides,
+  ...carouselSlides.map(slide => ({ ...slide, url: 'https://google.com' })),
   {
     title: "Mobile Banking App",
     button: "View Project",
     period: "2023 - 2024",
     src: "https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3",
-    url: "https://neofolio.shadcnuikit.com/projects/mobile-banking"
+    url: "https://google.com"
   },
   {
     title: "Travel Booking Platform",
     button: "View Project",
     period: "2022 - 2023",
     src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
-    url: "https://neofolio.shadcnuikit.com/projects/travel-booking"
+    url: "https://google.com"
   }
 ];
 
@@ -126,26 +127,27 @@ const blogPosts = [
     date: "August 2, 2024",
     image:
       "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
-    url: "https://neofolio.shadcnuikit.com/blog/future-of-javascript-es2025",
+    url: "https://google.com",
   },
   {
     id: 2,
     title: "How AI is Transforming Software Development",
     date: "August 5, 2024",
     image: "/link---figure---how-ai-is-transforming-software-development.png",
-    url: "https://neofolio.shadcnuikit.com/blog/ai-transforming-software-development",
+    url: "https://google.com",
   },
   {
     id: 3,
     title: "Top 5 Programming Languages for 2024",
     date: "August 10, 2024",
     image: "/link---figure---top-5-programming-languages-for-2024.png",
-    url: "https://neofolio.shadcnuikit.com/blog/top-programming-languages-2024",
+    url: "https://google.com",
   },
 ];
 
 export const HomePage = () => {
   const [copySuccess, setCopySuccess] = useState(false);
+  const carouselRef = useRef<CarouselRef>(null);
   
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("owenpechous@gmail.com").then(() => {
@@ -155,13 +157,13 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="p-8 max-w-[900px] mx-auto">
+    <>
       {/* Header Section */}
-      <section className="mb-20">
+      <section className="mt-8 mb-16">
         <div className="flex justify-between items-start mb-6">
           <div className="w-full">
-            <h1 className="text-5xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Hello! I'm Owen</h1>
-            <h2 className="text-5xl font-semibold text-[#ad9c5f] leading-tight">Frontend Developer</h2>
+            <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Hello! I'm Owen</h1>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#ad9c5f] leading-tight">Frontend Developer</h2>
           </div>
         </div>
 
@@ -193,32 +195,39 @@ export const HomePage = () => {
         </div>
       </section>
 
-      {/* Selected Work Section - Now using Carousel */}
-      <section className="mb-24">
+      {/* Selected Work Section - Controls moved below */}
+      <section className="mb-16">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white">Selected Work</h2>
-
-          <Button
-            variant="ghost"
-            className="flex items-center gap-1.5 text-[#ad9c5f] p-0 hover:bg-transparent"
-            asChild
-          >
-            <a
-              href="/projects"
-            >
-              <span className="font-medium text-sm">View All</span>
-              <ArrowRightIcon className="w-4 h-4" />
-            </a>
-          </Button>
+          {/* REMOVED Controls from header */}
+          {/* <div className="flex gap-2"> ... buttons ... </div> */}
         </div>
 
-        <div className="relative w-full mb-8">
-          <Carousel slides={extendedCarouselSlides} />
+        <div className="relative w-full mb-4"> {/* Reduced margin below carousel to accommodate buttons */}
+          <Carousel ref={carouselRef} slides={extendedCarouselSlides} />
+        </div>
+
+        {/* ADDED Controls below carousel, left-aligned */}
+        <div className="flex gap-2"> 
+          <button
+            onClick={() => carouselRef.current?.handlePreviousClick()}
+            className="h-7 w-7 rounded-full bg-neutral-100 dark:bg-[#222222] flex items-center justify-center group/button transition-colors"
+            aria-label="Previous Project"
+          >
+            <ArrowLeft className="h-5 w-5 text-neutral-950 dark:text-white group-hover/button:rotate-12 transition-transform duration-300" />
+          </button>
+          <button
+            onClick={() => carouselRef.current?.handleNextClick()}
+            className="h-7 w-7 rounded-full bg-neutral-100 dark:bg-[#222222] flex items-center justify-center group/button transition-colors"
+            aria-label="Next Project"
+          >
+            <ArrowRight className="h-5 w-5 text-neutral-950 dark:text-white group-hover/button:-rotate-12 transition-transform duration-300" />
+          </button>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="mb-24">
+      <section className="mb-16">
         <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-8">Services</h2>
 
         <div className="space-y-4">
@@ -241,20 +250,20 @@ export const HomePage = () => {
       </section>
 
       {/* What Clients Say Section */}
-      <section className="mb-24">
+      <section className="mb-16">
         <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-8">What clients say</h2>
         <AnimatedTestimonials testimonials={testimonials} />
       </section>
 
       {/* Blog Section */}
-      <section className="mb-20">
+      <section className="mb-16">
         <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-8">Blog</h2>
 
         <div className="space-y-8">
           {blogPosts.map((post) => (
             <div key={post.id} className="pb-6">
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">{post.date}</p>
-              <div className="flex justify-between items-center flex-col md:flex-row md:space-y-0 space-y-4 mb-4">
+              <div className="flex justify-between items-start md:items-center flex-col md:flex-row md:space-y-0 space-y-4 mb-4">
                 <h3 className="text-neutral-950 dark:text-white text-lg font-medium hover:text-[#ad9c5f] dark:hover:text-[#ad9c5f] transition-colors duration-200">
                   <a href={post.url}>{post.title}</a>
                 </h3>
@@ -266,7 +275,7 @@ export const HomePage = () => {
                 >
                   <a href={post.url}>
                     <span className="font-medium text-sm">Read</span>
-                    <ArrowRightIcon className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </Button>
               </div>
@@ -277,7 +286,7 @@ export const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 mb-6 shadow-sm">
+      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 shadow-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
@@ -330,6 +339,6 @@ export const HomePage = () => {
           </a>
         </Button>
       </section>
-    </div>
+    </>
   );
 };

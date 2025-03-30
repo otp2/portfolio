@@ -39,14 +39,14 @@ const projects = [
     title: "Modern E-commerce Platform",
     period: "2024 - 2025",
     image: "/figure---modern-e-commerce-platform.png",
-    url: "https://neofolio.shadcnuikit.com/projects/modern-ecommerce-platform",
+    url: "https://google.com",
   },
   {
     id: 2,
     title: "AI-Powered Analytics Dashboard",
     period: "2023 - 2024",
     image: "/figure---ai-powered-analytics-dashboard.png",
-    url: "https://neofolio.shadcnuikit.com/projects/ai-analytics-dashboard",
+    url: "https://google.com",
   },
 ];
 
@@ -116,21 +116,21 @@ const blogPosts = [
     date: "August 2, 2024",
     image:
       "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
-    url: "https://neofolio.shadcnuikit.com/blog/future-of-javascript-es2025",
+    url: "https://google.com",
   },
   {
     id: 2,
     title: "How AI is Transforming Software Development",
     date: "August 5, 2024",
     image: "/link---figure---how-ai-is-transforming-software-development.png",
-    url: "https://neofolio.shadcnuikit.com/blog/ai-transforming-software-development",
+    url: "https://google.com",
   },
   {
     id: 3,
     title: "Top 5 Programming Languages for 2024",
     date: "August 10, 2024",
     image: "/link---figure---top-5-programming-languages-for-2024.png",
-    url: "https://neofolio.shadcnuikit.com/blog/top-programming-languages-2024",
+    url: "https://google.com",
   },
 ];
 
@@ -295,7 +295,7 @@ export const Container = (): JSX.Element => {
               <div className="flex gap-3">
                 <Button className="h-10 bg-[#ad9c5f] hover:bg-[#9d8d50] text-white rounded-lg px-5 text-sm" asChild>
                   <a
-                    href="https://neofolio.shadcnuikit.com/about"
+                    href="https://google.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -326,7 +326,7 @@ export const Container = (): JSX.Element => {
                   asChild
                 >
                   <a
-                    href="https://neofolio.shadcnuikit.com/projects"
+                    href="https://google.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
