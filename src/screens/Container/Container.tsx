@@ -482,7 +482,7 @@ export const Container = (): JSX.Element => {
                 asChild
               >
                 <a
-                  href="https://cal.com/"
+                  href="https://cal.com/owen-pechous-ohsdk3/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

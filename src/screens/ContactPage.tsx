@@ -109,7 +109,7 @@ export const ContactPage = () => {
             asChild
           >
             <a
-              href="https://cal.com/user"
+              href="https://cal.com/owen-pechous-ohsdk3/30min"
               target="_blank"
               rel="noopener noreferrer"
             >
