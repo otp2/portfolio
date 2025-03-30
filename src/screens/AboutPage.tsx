@@ -25,7 +25,7 @@ const services = [
   {
     id: 2,
     title: "Frontend Development",
-    price: "100",
+    price: "90",
     icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {

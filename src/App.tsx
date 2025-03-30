@@ -12,7 +12,7 @@ import { ThemeToggle } from "./components/ui/theme-toggle";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 export const App = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 1280);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
@@ -29,9 +29,6 @@ export const App = () => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 1280);
     };
-    
-    // Initial check
-    checkIfMobile();
     
     // Add event listener
     window.addEventListener('resize', checkIfMobile);
@@ -60,9 +57,9 @@ export const App = () => {
       )}
 
       {/* Main Content with Seamless Background - Reverted Structure */}
-      <div className={`relative ${isMobile ? 'w-full px-4' : 'ml-52'}`}> 
-        <div className={`absolute top-6 ${isMobile ? 'left-4 right-4 bottom-28' : 'left-6 right-6 bottom-28'} bg-[#FAFAFA] dark:bg-[#0A0A0A] rounded-3xl z-0`}></div>
-        <div className={`relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16`}>
+      <div className={`relative ${isMobile ? 'w-full px-4' : 'ml-52'} mb-1.5`}> 
+        <div className={`absolute top-6 ${isMobile ? 'left-4 right-4 bottom-6' : 'left-6 right-6 bottom-6'} bg-[#FAFAFA] dark:bg-[#0A0A0A] rounded-3xl z-0`}></div>
+        <div className={`relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16`}>
           {isMobile && (
             <MobileHeader 
               isMenuOpen={isMenuOpen} 

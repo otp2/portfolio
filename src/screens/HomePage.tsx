@@ -74,7 +74,7 @@ const services = [
   {
     id: 2,
     title: "Frontend Development",
-    price: "100",
+    price: "90",
     icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {
@@ -196,7 +196,7 @@ export const HomePage = () => {
       </section>
 
       {/* Selected Work Section - Controls moved below */}
-      <section className="mb-16">
+      <section className="mb-8">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white">Selected Work</h2>
           {/* REMOVED Controls from header */}
