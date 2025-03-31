@@ -6,6 +6,7 @@ import { AboutPage } from "./screens/AboutPage";
 import { ContactPage } from "./screens/ContactPage";
 import { BlogPage } from "./screens/BlogPage";
 import { BlogPostPage } from "./screens/BlogPostPage";
+import { ProjectDetailPage } from "./screens/ProjectDetailPage";
 import { Sidebar } from "./components/Sidebar";
 import { MobileHeader } from "./components/MobileHeader";
 import { ThemeToggle } from "./components/ui/theme-toggle";
@@ -73,6 +74,7 @@ export const App = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/projects/sb-management" element={<ProjectDetailPage />} />
           </Routes>
         </div>
       </div>
@@ -81,7 +83,7 @@ export const App = () => {
       <footer className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
           <p className="text-xs text-neutral-400 dark:text-neutral-400">© 2025 Owen Pechous</p>
           <p className="text-xs text-neutral-400 dark:text-neutral-400">
-            Frontend Developer
+            Creative Technologist
           </p>
       </footer>
 

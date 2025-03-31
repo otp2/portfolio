@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex flex-col py-2">
           <motion.div
             key={active}
             initial={{
@@ -112,7 +112,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-neutral-500 dark:text-neutral-400 mt-8">
+            <motion.p className="text-lg text-neutral-500 dark:text-neutral-400 mt-8 md:mt-4">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -138,7 +138,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 mt-6">
             <button
               onClick={handlePrev}
               className="h-7 w-7 rounded-full bg-neutral-100 dark:bg-[#222222] flex items-center justify-center group/button"

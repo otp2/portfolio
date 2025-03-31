@@ -59,9 +59,9 @@ export const ContactPage = () => {
   return (
     <>
       <header className="mt-8 mb-10">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Contact</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Let's build something real</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
-          I'm always excited to collaborate on innovative and exciting projects!
+          If you're working on something interesting and need help making it happen, reach out.
         </p>
       </header>
 
@@ -71,7 +71,7 @@ export const ContactPage = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
             <p className="text-neutral-600 dark:text-neutral-400 text-base">
-              I'm always excited to collaborate on innovative and exciting projects!
+              Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
             </p>
           </div>
 

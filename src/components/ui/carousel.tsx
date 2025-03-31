@@ -1,6 +1,7 @@
 "use client";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect, forwardRef, useImperativeHandle } from "react";
+import { Link } from "react-router-dom";
 
 interface SlideData {
   title: string;
@@ -65,6 +66,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   };
 
   const { src, button, title, url, period } = slide;
+  const isInternalLink = url && url.startsWith('/');
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -120,11 +122,19 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             <p className="text-xs text-white/70 mb-2">{period}</p>
           )}
           <div className="flex justify-center">
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              <button className="mt-2 px-3 py-1 w-fit mx-auto text-xs text-black bg-white border border-transparent flex justify-center items-center rounded-lg hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-                {button}
-              </button>
-            </a>
+            {isInternalLink ? (
+              <Link to={url}>
+                <button className="mt-2 px-3 py-1 w-fit mx-auto text-xs text-black bg-white border border-transparent flex justify-center items-center rounded-lg hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                  {button}
+                </button>
+              </Link>
+            ) : (
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                <button className="mt-2 px-3 py-1 w-fit mx-auto text-xs text-black bg-white border border-transparent flex justify-center items-center rounded-lg hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                  {button}
+                </button>
+              </a>
+            )}
           </div>
         </article>
       </li>

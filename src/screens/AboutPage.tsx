@@ -39,21 +39,21 @@ const services = [
 // Data for testimonials
 const testimonials = [
   {
-    quote: "The attention to detail and expertise in design systems are unmatched. Our SaaS product now feels more polished than ever.",
-    name: "Robert Brown",
-    designation: "InnovateX",
+    quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
+    name: "Jeffrey Grisamore",
+    designation: "CEO, EGR International",
     src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "Their frontend development work is outstanding. They understood our requirements perfectly and delivered beyond expectations.",
-    name: "Emily Davis",
-    designation: "NextGen Tech",
+    quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
+    name: "Darren Keller",
+    designation: "Founder, SB Management",
     src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "The tools and systems they provided have made a huge impact on our design and development process. Exceptional work!",
-    name: "Michael Wilson",
-    designation: "GlobalSoft",
+    quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
+    name: "Monica West",
+    designation: "Director, Iowa Donor Network",
     src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
@@ -87,10 +87,10 @@ export const AboutPage = () => {
         <div className="flex flex-col md:flex-row gap-12 items-start mb-8">
           <div className="flex-1">
             <h1 className="text-3xl sm:text-4xl font-bold text-neutral-950 dark:text-white mb-2">Hello! I'm Owen</h1>
-            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Frontend Developer</h2>
+            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Creative Technologist</h2>
             
             <p className="text-gray-600 dark:text-neutral-400 text-base mb-6">
-              Frontend developer and design system specialist with over 9 years of experience focusing on user experience and design systems to create user-centered designs in SaaS products. I specialize in building scalable and maintainable frontend architectures that deliver exceptional user experiences.
+              I build websites, brands, and systems from the ground up. My work spans design, development, messaging, and just about anything else you can think of. I'm self-taught, fast-moving, and focused on making things that actually work.
             </p>
           </div>
           
@@ -135,7 +135,7 @@ export const AboutPage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            I'm always excited to collaborate on innovative and exciting projects!
+            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
           </p>
         </div>
 

@@ -1,5 +1,7 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import { Button } from "../components/ui/button";
 
 // Mock data for blog posts
 const blogPosts = [
@@ -63,9 +65,9 @@ export const BlogPage = () => {
   return (
     <>
       <header className="mt-8 mb-16">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Blog</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Stuff I've learned building things</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
-          Explore cutting-edge design innovations that transform ideas into reality
+          Quick hits on design, code, and figuring it out as I go.
         </p>
       </header>
 

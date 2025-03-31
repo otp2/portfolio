@@ -12,10 +12,10 @@ const allProjects = [
   },
   {
     id: 2,
-    title: "AI-Powered Analytics Dashboard",
-    period: "2023 - 2024",
+    title: "Site and Lead System Built in 48h",
+    period: "March 2025",
     image: "/figure---ai-powered-analytics-dashboard.png",
-    url: "https://google.com",
+    url: "/projects/sb-management",
   },
   {
     id: 3,
@@ -37,9 +37,9 @@ export const ProjectsPage = () => {
   return (
     <>
       <header className="mt-8 mb-16">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Projects</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Things I've built that actually shipped</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
-          Explore cutting-edge design innovations that transform ideas into reality
+          Design, code, automation, systems, and more
         </p>
       </header>
 
@@ -51,15 +51,13 @@ export const ProjectsPage = () => {
               style={{ backgroundImage: `url(${project.image})` }}
             >
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                <a 
-                  href={project.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  to={project.url} 
                   className="bg-white text-black dark:bg-[#151515] dark:text-white rounded-lg py-2 px-4 flex items-center gap-2 transform translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
                 >
                   <span>View Project</span>
-                  <ExternalLinkIcon className="w-4 h-4" />
-                </a>
+                  {!project.url.startsWith('/') && <ExternalLinkIcon className="w-4 h-4" />}
+                </Link>
               </div>
             </div>
             <h3 className="text-xl font-bold text-neutral-950 dark:text-white mb-1">

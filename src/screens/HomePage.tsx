@@ -8,6 +8,7 @@ import {
   PackageIcon,
   GlobeIcon,
   PhoneIcon,
+  CalendarDaysIcon,
 } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { Badge } from "../components/ui/badge";
@@ -28,10 +29,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "AI-Powered Analytics Dashboard",
-    period: "2023 - 2024",
+    title: "Site and Lead System Built in 48h",
+    period: "March 2025",
     image: "/figure---ai-powered-analytics-dashboard.png",
-    url: "https://google.com",
+    url: "/projects/sb-management",
   },
 ];
 
@@ -46,7 +47,7 @@ const carouselSlides = projects.map(project => ({
 
 // Add two more slides to showcase more work
 const extendedCarouselSlides = [
-  ...carouselSlides.map(slide => ({ ...slide, url: 'https://google.com' })),
+  ...carouselSlides.map(slide => ({ ...slide })),
   {
     title: "Mobile Banking App",
     button: "View Project",
@@ -88,21 +89,21 @@ const services = [
 // Data for testimonials formatted for AnimatedTestimonials component
 const testimonials = [
   {
-    quote: "The attention to detail and expertise in design systems are unmatched. Our SaaS product now feels more polished than ever.",
-    name: "Robert Brown",
-    designation: "InnovateX",
+    quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
+    name: "Jeffrey Grisamore",
+    designation: "CEO, EGR International",
     src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "Their frontend development work is outstanding. They understood our requirements perfectly and delivered beyond expectations.",
-    name: "Emily Davis",
-    designation: "NextGen Tech",
+    quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
+    name: "Darren Keller",
+    designation: "Founder, SB Management",
     src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "The tools and systems they provided have made a huge impact on our design and development process. Exceptional work!",
-    name: "Michael Wilson",
-    designation: "GlobalSoft",
+    quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
+    name: "Monica West",
+    designation: "Director, Iowa Donor Network",
     src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
@@ -163,14 +164,12 @@ export const HomePage = () => {
         <div className="flex justify-between items-start mb-6">
           <div className="w-full">
             <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Hello! I'm Owen</h1>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#ad9c5f] leading-tight">Frontend Developer</h2>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#ad9c5f] leading-tight">Creative Technologist</h2>
           </div>
         </div>
 
         <p className="text-gray-600 dark:text-neutral-400 text-lg mb-8 max-w-3xl">
-          Frontend developer and design system specialist with over 9 years of experience
-          focusing on user experience and design systems to create user-centered designs in SaaS
-          products.
+          I build websites, brands, and systems from the ground up. My work spans design, development, messaging, and just about anything else you can think of. I'm self-taught, fast-moving, and focused on making things that actually work.
         </p>
 
         <div className="flex gap-4">
@@ -185,12 +184,18 @@ export const HomePage = () => {
           <Button
             variant="outline"
             className="h-12 flex items-center gap-2 text-sm font-medium border border-neutral-200 dark:border-[#222222] dark:bg-transparent dark:text-white rounded-lg"
-            onClick={handleCopyEmail}
+            asChild
           >
-            <ClipboardCopyIcon className="w-4 h-4" />
-            <span className="font-medium text-neutral-950 dark:text-white">
-              {copySuccess ? "Copied!" : "Copy mail"}
-            </span>
+            <a
+              href="https://cal.com/owen-pechous-ohsdk3/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CalendarDaysIcon className="w-4 h-4" />
+              <span className="font-medium text-neutral-950 dark:text-white">
+                Schedule a call
+              </span>
+            </a>
           </Button>
         </div>
       </section>
@@ -290,7 +295,7 @@ export const HomePage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            I'm always excited to collaborate on innovative and exciting projects!
+            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
           </p>
         </div>
 

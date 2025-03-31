@@ -282,14 +282,12 @@ export const Container = (): JSX.Element => {
               <div className="flex justify-between items-start mb-6">
                 <div className="w-full">
                   <h1 className="text-5xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Hello! I'm Owen</h1>
-                  <h2 className="text-5xl font-semibold text-[#ad9c5f] leading-tight">Frontend Developer</h2>
+                  <h2 className="text-5xl font-semibold text-[#ad9c5f] leading-tight">Creative Technologist</h2>
                 </div>
               </div>
 
               <p className="text-gray-600 dark:text-neutral-400 text-base mb-6">
-                Frontend developer and design system specialist with over 9 years of experience<br />
-                focusing on user experience and design systems to create user-centered designs in SaaS<br />
-                products.
+                I build websites, brands, and systems from the ground up. My work spans design, development, messaging, and just about anything else you can think of. I'm self-taught, fast-moving, and focused on making things that actually work.<br />
               </p>
 
               <div className="flex gap-3">
@@ -436,11 +434,11 @@ export const Container = (): JSX.Element => {
             </section>
 
             {/* Contact Section */}
-            <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-6 mb-6">
-              <div className="mb-6">
+            <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 shadow-sm">
+              <div className="mb-8">
                 <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-2">Got questions?</h2>
-                <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-                  I'm always excited to collaborate on innovative and exciting projects!
+                <p className="text-neutral-600 dark:text-neutral-400 text-base">
+                  Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
                 </p>
               </div>
 

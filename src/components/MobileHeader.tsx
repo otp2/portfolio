@@ -16,7 +16,7 @@ export const MobileHeader = ({ isMenuOpen, setIsMenuOpen }: MobileHeaderProps) =
           </Avatar>
           <div>
             <h3 className="font-semibold text-sm text-neutral-900 dark:text-white">Owen Pechous</h3>
-            <p className="text-xs text-neutral-500 dark:text-neutral-400">Frontend Developer</p>
+            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Creative Technologist</p>
           </div>
         </div>
       </div>
