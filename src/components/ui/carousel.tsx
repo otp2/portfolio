@@ -94,17 +94,22 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
-            className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
-            style={{
-              opacity: current === index ? 1 : 0.5,
-            }}
-            alt={title}
-            src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
-          />
+          <div className="relative w-full h-full group rounded-lg overflow-hidden 
+                          after:absolute after:inset-0 after:bg-gradient-to-t after:from-white/60 after:to-transparent 
+                          after:backdrop-blur-sm 
+                          after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300">
+            <img
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out"
+              style={{
+                opacity: current === index ? 1 : 0.5,
+              }}
+              alt={title}
+              src={src}
+              onLoad={imageLoaded}
+              loading="eager"
+              decoding="sync"
+            />
+          </div>
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
           )}

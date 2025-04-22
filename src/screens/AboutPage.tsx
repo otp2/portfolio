@@ -176,7 +176,7 @@ export const AboutPage = () => {
           asChild
         >
           <a
-            href="https://cal.com/owen-pechous-ohsdk3/30min"
+            href="https://cal.com/opechous/portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >

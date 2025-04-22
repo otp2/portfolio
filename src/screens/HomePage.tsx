@@ -22,16 +22,16 @@ import { useState, useRef } from "react";
 const projects = [
   {
     id: 1,
-    title: "Modern E-commerce Platform",
-    period: "2024 - 2025",
-    image: "/figure---modern-e-commerce-platform.png",
-    url: "https://google.com",
+    title: "124-column Excel file to live database",
+    period: "January 2025",
+    image: "/bcp-port-img.png",
+    url: "/projects/bcp",
   },
   {
     id: 2,
     title: "Site and Lead System Built in 48h",
     period: "March 2025",
-    image: "/figure---ai-powered-analytics-dashboard.png",
+    image: "/sbmgmt-port-img-1.png",
     url: "/projects/sb-management",
   },
 ];
@@ -187,7 +187,7 @@ export const HomePage = () => {
             asChild
           >
             <a
-              href="https://cal.com/owen-pechous-ohsdk3/30min"
+              href="https://cal.com/opechous/portfolio"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -336,7 +336,7 @@ export const HomePage = () => {
           asChild
         >
           <a
-            href="https://cal.com/owen-pechous-ohsdk3/30min"
+            href="https://cal.com/opechous/portfolio"
             target="_blank"
             rel="noopener noreferrer"
           >

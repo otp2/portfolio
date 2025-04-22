@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "../components/ui/button";
 
-// No specific project data fetching needed here as content is static for this example
-// In a real scenario, you might fetch project details based on a slug or ID
-
-export const ProjectDetailPage = () => {
-  // Removed unused navigate variable
-  
+export const BcpProjectPage = () => {
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,32 +24,40 @@ export const ProjectDetailPage = () => {
       
       {/* Project content */}
       <article className="mb-16">
-        {/* Using prose class for similar typography styling to blog posts */}
+        {/* Using prose class for similar typography styling */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
           {/* Project Title/Header */}
           <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-8">
-            Built a full brand and lead-gen site for a financial services business from zero in one weekend
+            Transformed a 2,000-row spreadsheet into a scalable mental health provider search tool built for clarity, speed, and real-time updates
           </h1>
           
           {/* Project Description */}
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            SB Management had no digital presence and needed to look legit fast. I created the brand identity from scratch, designed the full site experience, and built it with Next.js and React. Every component is custom but still fast to edit. I set up lead capture using Google Sheets, webhooks, and n8n so the client gets notified instantly when someone submits the form. No backend, no extra tools, just clean automation. Went from nothing to live in under 48 hours.
+            Behavioral Care Partners was publishing a 124-column spreadsheet of mental health providers as a PDF. It was dense, impossible to search, and disconnected from the actual experience people needed when looking for care.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 mb-6">
+            I worked directly with their leadership and admin teams to understand how the old file was being used—what mattered most, what filters people needed, and how to translate those functions into something usable. From there, I built a fully searchable, filterable provider directory backed by Supabase.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 mb-6">
+            The system ingests raw spreadsheet data and runs it through a custom pipeline I wrote using SQL functions, triggers, and table logic. Once processed, provider info is live on the site—searchable by location, specialty, age group, language, and more. It's fast, accurate, and designed for internal teams to manage without technical help.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-8">
-            This project forced me to move fast without cutting corners. I leveled up my skills in systems thinking, frontend performance, and API-based automation. It also pushed me to balance speed with design quality and think holistically about how a site communicates trust and value to a cold audience.
+            This project pushed me to build a real backend pipeline from scratch, structure relational data for scale, and think like a product strategist inside a healthcare org. It also taught me how to match institutional workflows with modern frontend systems without overcomplicating the stack.
           </p>
 
           {/* Stack Used Section */}
           <div className="mb-8">
             <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack used</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li className="text-neutral-800 dark:text-neutral-200">Next.js</li>
-              <li className="text-neutral-800 dark:text-neutral-200">React</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Figma</li>
-              <li className="text-neutral-800 dark:text-neutral-200">n8n</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Google Sheets</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Netlify</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Custom webhook routing</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Supabase</li>
+              <li className="text-neutral-800 dark:text-neutral-200">PostgreSQL triggers and functions</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Custom SQL cleaning and mapping</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Tailored filter logic and UI components</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Javascript</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Typescript</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Tailwind</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Structured provider taxonomy schema</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Automated data sync from spreadsheet to site</li>
             </ul>
           </div>
 
@@ -62,19 +65,19 @@ export const ProjectDetailPage = () => {
           <div className="mb-8">
              <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Live site</h2>
              <a 
-               href="https://sbmgmt.co" 
+               href="https://behavioralcarepartners.com/find-provider" 
                target="_blank" 
                rel="noopener noreferrer"
                className="text-[#ad9c5f] hover:underline break-words" 
              >
-               https://sbmgmt.co
+               https://behavioralcarepartners.com/find-provider
              </a>
           </div>
 
         </div>
       </article>
       
-      {/* Contact Section */}
+      {/* Contact Section (copied from original detail page) */}
       <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 mb-6 shadow-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
@@ -120,7 +123,7 @@ export const ProjectDetailPage = () => {
           asChild
         >
           <a
-            href="https://cal.com/opechous/portfolio"
+            href="https://cal.com/opechous/portfolio" // Uses the updated cal link
             target="_blank"
             rel="noopener noreferrer"
           >

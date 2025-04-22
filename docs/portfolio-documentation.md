@@ -24,6 +24,8 @@ The application consists of the following pages:
 | Blog Post | `/blog/:slug` | Individual blog post page |
 | Contact | `/contact` | Contact form and details |
 | Demo | `/demo` | Demo/showcase page for specific features |
+| Project: SB Management | `/projects/sb-management` | Detail page for SB Management project |
+| Project: BCP Provider Search | `/projects/bcp` | Detail page for Behavioral Care Partners project |
 
 ## Color Scheme
 
@@ -66,6 +68,8 @@ The application uses a carefully selected color palette that adapts between ligh
 | Contact Card | `#ffffff` (white) | `#222222` |
 
 ## Typography
+
+*Note: Previous analysis showed the actual fonts configured are Figtree (sans) and Brawler (serif), not Nunito as stated below. This section needs updating if Nunito is not correct.* 
 
 The application uses the Nunito font family throughout, with defined styles for different text elements:
 
@@ -150,3 +154,15 @@ The application adapts to different screen sizes:
 - Side-by-side elements where appropriate
 - Persistent sidebar navigation
 - Optimized spacing and layout
+
+## Recent Changes & Notes
+
+- Added new project: Behavioral Care Partners provider search tool.
+  - New detail page: `src/screens/BcpProjectPage.tsx` at route `/projects/bcp`.
+  - Updated project listings on Home and Projects pages (`/bcp-port-img.png`).
+- Updated SB Management project:
+  - Replaced image with `/sbmgmt-port-img-1.png`.
+  - Added hover effect to project images (gradient/blur).
+- Updated Cal.com link to `https://cal.com/opechous/portfolio` across multiple pages.
+- Fixed unused `navigate` variable warnings in project detail pages.
+- Attempted font change to Inter/Geist, but reverted due to appearance issues. Current fonts remain Figtree/Brawler.
