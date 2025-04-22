@@ -2,21 +2,17 @@ import {
   ArrowLeft,
   ArrowRight,
   CodeIcon,
-  ClipboardCopyIcon,
   MailIcon,
-  BriefcaseIcon,
   PackageIcon,
   GlobeIcon,
   PhoneIcon,
   CalendarDaysIcon,
 } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Separator } from "../components/ui/separator";
 import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
 import { Carousel, CarouselRef } from "../components/ui/carousel";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 // Data for projects
 const projects = [
@@ -56,11 +52,11 @@ const extendedCarouselSlides = [
     url: "https://google.com"
   },
   {
-    title: "Travel Booking Platform",
+    title: "Spanish Radio Ad Campaign",
     button: "View Project",
-    period: "2022 - 2023",
-    src: "https://images.unsplash.com/photo-1679420437432-80cfbf88986c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
-    url: "https://google.com"
+    period: "April 2024",
+    src: "/radio-ad-img.png",
+    url: "/projects/spanish-ad"
   }
 ];
 
@@ -92,19 +88,19 @@ const testimonials = [
     quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
     name: "Jeffrey Grisamore",
     designation: "CEO, EGR International",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/j-gris.webp",
   },
   {
     quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
     name: "Darren Keller",
     designation: "Founder, SB Management",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/d-kell.webp",
   },
   {
     quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
     name: "Monica West",
     designation: "Director, Iowa Donor Network",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/m-west.webp",
   },
   {
     quote: "Their dedication to creating user-centered designs is evident in every aspect of their work. Truly a pleasure to work with.",
@@ -147,16 +143,8 @@ const blogPosts = [
 ];
 
 export const HomePage = () => {
-  const [copySuccess, setCopySuccess] = useState(false);
   const carouselRef = useRef<CarouselRef>(null);
   
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("owenpechous@gmail.com").then(() => {
-      setCopySuccess(true);
-      setTimeout(() => setCopySuccess(false), 2000);
-    });
-  };
-
   return (
     <>
       {/* Header Section */}

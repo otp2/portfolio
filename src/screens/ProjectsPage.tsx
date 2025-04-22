@@ -26,10 +26,10 @@ const allProjects = [
   },
   {
     id: 4,
-    title: "Real Estate Management System",
-    period: "2022 - 2023",
-    image: "/figure---ai-powered-analytics-dashboard.png", // Placeholder image
-    url: "https://google.com",
+    title: "Spanish Radio Ad Campaign",
+    period: "April 2024",
+    image: "/radio-ad-img.png",
+    url: "/projects/spanish-ad",
   },
 ];
 

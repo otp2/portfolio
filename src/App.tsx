@@ -8,6 +8,7 @@ import { BlogPage } from "./screens/BlogPage";
 import { BlogPostPage } from "./screens/BlogPostPage";
 import { ProjectDetailPage } from "./screens/ProjectDetailPage";
 import { BcpProjectPage } from "./screens/BcpProjectPage";
+import { IdnRadioCampaignPage } from "./screens/IdnRadioCampaignPage";
 import { Sidebar } from "./components/Sidebar";
 import { MobileHeader } from "./components/MobileHeader";
 import { ThemeToggle } from "./components/ui/theme-toggle";
@@ -77,6 +78,7 @@ export const App = () => {
             <Route path="/blog/:slug" element={<BlogPostPage />} />
             <Route path="/projects/sb-management" element={<ProjectDetailPage />} />
             <Route path="/projects/bcp" element={<BcpProjectPage />} />
+            <Route path="/projects/spanish-ad" element={<IdnRadioCampaignPage />} />
           </Routes>
         </div>
       </div>

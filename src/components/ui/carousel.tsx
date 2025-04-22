@@ -1,7 +1,8 @@
 "use client";
-import { IconArrowNarrowRight } from "@tabler/icons-react";
+// import { IconArrowNarrowRight } from "@tabler/icons-react"; // Removed unused import
 import { useState, useRef, useId, useEffect, forwardRef, useImperativeHandle } from "react";
 import { Link } from "react-router-dom";
+import { cn } from "../../lib/utils"; // Make sure cn is imported if not already
 
 interface SlideData {
   title: string;
@@ -67,6 +68,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
 
   const { src, button, title, url, period } = slide;
   const isInternalLink = url && url.startsWith('/');
+  const isRadioAd = src === "/radio-ad-img.png"; // Check if it's the radio ad image
 
   return (
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -99,15 +101,18 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
                           after:backdrop-blur-sm 
                           after:opacity-0 group-hover:after:opacity-100 after:transition-opacity after:duration-300">
             <img
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out"
+              className={cn(
+                "absolute inset-0 w-full h-full object-cover transition-opacity duration-600 ease-in-out",
+                isRadioAd && "scale-105" // Conditionally add scale for the radio ad
+              )}
               style={{
                 opacity: current === index ? 1 : 0.5,
               }}
               alt={title}
               src={src}
               onLoad={imageLoaded}
-              loading="eager"
-              decoding="sync"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           {current === index && (
@@ -144,30 +149,6 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </article>
       </li>
     </div>
-  );
-};
-
-interface CarouselControlProps {
-  type: string;
-  title: string;
-  handleClick: () => void;
-}
-
-const CarouselControl = ({
-  type,
-  title,
-  handleClick,
-}: CarouselControlProps) => {
-  return (
-    <button
-      className={`w-8 h-8 flex items-center justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === "previous" ? "rotate-180 mr-2" : "ml-2"
-      }`}
-      title={title}
-      onClick={handleClick}
-    >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200 w-4 h-4" />
-    </button>
   );
 };
 
