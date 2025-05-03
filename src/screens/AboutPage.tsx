@@ -42,19 +42,19 @@ const testimonials = [
     quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
     name: "Jeffrey Grisamore",
     designation: "CEO, EGR International",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/j-gris.webp",
   },
   {
     quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
     name: "Darren Keller",
     designation: "Founder, SB Management",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/d-kell.webp",
   },
   {
     quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
     name: "Monica West",
     designation: "Director, Iowa Donor Network",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
+    src: "/m-west.webp",
   },
   {
     quote: "Their dedication to creating user-centered designs is evident in every aspect of their work. Truly a pleasure to work with.",

@@ -40,10 +40,10 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <div className={cn("max-w-sm md:max-w-4xl py-6", className)}>
+    <div className={cn("max-w-sm md:max-w-4xl pt-2 pb-6 md:py-6", className)}>
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <div className="relative h-72 mx-auto md:mx-0 md:max-w-72">
+          <div className="relative h-64 max-w-72 md:h-72 md:max-w-72 mx-auto md:mx-0">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -86,7 +86,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col py-2">
+        <div className="flex flex-col py-2 mt-6 md:mt-0">
           <motion.div
             key={active}
             initial={{
@@ -112,7 +112,7 @@ export const AnimatedTestimonials = ({
             <p className="text-sm text-neutral-500 dark:text-neutral-400">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-neutral-500 dark:text-neutral-400 mt-8 md:mt-4">
+            <motion.p className="text-lg text-neutral-500 dark:text-neutral-400 mt-4">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

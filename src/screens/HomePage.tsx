@@ -13,6 +13,7 @@ import { Separator } from "../components/ui/separator";
 import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
 import { Carousel, CarouselRef } from "../components/ui/carousel";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 // Data for projects
 const projects = [
@@ -116,30 +117,37 @@ const testimonials = [
   },
 ];
 
-// Data for blog posts
+// Data for blog posts - Reordered by date (newest first), showing top 3
 const blogPosts = [
-  {
-    id: 1,
-    title: "The Future of JavaScript: What's New in ES2025?",
-    date: "August 2, 2024",
-    image:
-      "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
-    url: "https://google.com",
-  },
+  // 1. (ID 2) May 1, 2025
   {
     id: 2,
-    title: "How AI is Transforming Software Development",
-    date: "August 5, 2024",
+    title: "From Airtable AI to Custom GPT-4 & Supabase Integration: Why and How I Made the Switch",
+    date: "May 1, 2025",
     image: "/link---figure---how-ai-is-transforming-software-development.png",
-    url: "https://google.com",
+    slug: "airtable-ai-to-gpt4-supabase",
+    author: "Owen Pechous",
   },
+  // 2. (ID 4) March 24, 2025
   {
-    id: 3,
-    title: "Top 5 Programming Languages for 2024",
-    date: "August 10, 2024",
-    image: "/link---figure---top-5-programming-languages-for-2024.png",
-    url: "https://google.com",
+    id: 4,
+    title: "Turning Messy Client Requests into Clear Project Roadmaps",
+    date: "March 24, 2025",
+    image: "/link---figure---how-ai-is-transforming-software-development.png", // This image is now used twice in the top 3 previews
+    slug: "client-requests-to-roadmaps",
+    author: "Owen Pechous"
   },
+  // 3. (ID 1) Dec 30, 2024
+  {
+    id: 1,
+    title: "Never Stop Learning: Why Graduation Shouldn't Be the Finish Line",
+    date: "December 30, 2024",
+    image:
+      "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
+    slug: "never-stop-learning",
+    author: "Owen Pechous",
+  },
+  // Note: Posts 3 and 5 are no longer shown in the homepage preview due to ordering
 ];
 
 export const HomePage = () => {
@@ -258,7 +266,7 @@ export const HomePage = () => {
               <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">{post.date}</p>
               <div className="flex justify-between items-start md:items-center flex-col md:flex-row md:space-y-0 space-y-4 mb-4">
                 <h3 className="text-neutral-950 dark:text-white text-lg font-medium hover:text-[#ad9c5f] dark:hover:text-[#ad9c5f] transition-colors duration-200">
-                  <a href={post.url}>{post.title}</a>
+                  <Link to={`/blog/${post.slug}`}>{post.title}</Link>
                 </h3>
                 <Button
                   variant="ghost"
@@ -266,10 +274,10 @@ export const HomePage = () => {
                   className="h-8 flex items-center gap-2 text-[#ad9c5f] hover:text-[#9d8d50] dark:text-[#ad9c5f] dark:hover:text-[#9d8d50] hover:bg-transparent p-0 ml-0 md:ml-4"
                   asChild
                 >
-                  <a href={post.url}>
+                  <Link to={`/blog/${post.slug}`}>
                     <span className="font-medium text-sm">Read</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
               <Separator className="dark:bg-[#222222]" />

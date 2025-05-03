@@ -10,8 +10,8 @@ Built with React, TypeScript, Tailwind CSS, and Shadcn UI components, featuring 
 - **Dark Mode**: User-toggleable light and dark themes
 - **Component-Based**: Built with reusable React components using Shadcn UI
 - **Project Showcase**: Displays selected work with details (conceptually includes individual project pages)
-- **Animated Testimonials**: Interactive display of client feedback
-- **Blog Integration**: Sections for displaying blog posts and individual articles
+- **Animated Testimonials**: Interactive display of client feedback (with responsive styling)
+- **Blog Integration**: Features a blog page with post previews and individual article pages (currently uses mock data).
 - **Netlify Forms**: Integrated contact form submission
 
 ## Tech Stack
