@@ -71,7 +71,7 @@ export const ContactPage = () => {
           <div className="mb-8">
             <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
             <p className="text-neutral-600 dark:text-neutral-400 text-base">
-              Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+              Working on something interesting? I'd love to help bring your ideas to life. Reach out below, and let's get started.
             </p>
           </div>
 

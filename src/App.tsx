@@ -87,7 +87,7 @@ export const App = () => {
       <footer className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
           <p className="text-xs text-neutral-400 dark:text-neutral-400">© 2025 Owen Pechous</p>
           <p className="text-xs text-neutral-400 dark:text-neutral-400">
-            Creative Technologist
+            Designer & Developer
           </p>
       </footer>
 

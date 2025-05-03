@@ -436,9 +436,9 @@ export const Container = (): JSX.Element => {
             {/* Contact Section */}
             <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 shadow-sm">
               <div className="mb-8">
-                <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-2">Got questions?</h2>
+                <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
                 <p className="text-neutral-600 dark:text-neutral-400 text-base">
-                  Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+                  I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
                 </p>
               </div>
 

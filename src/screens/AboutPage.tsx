@@ -45,27 +45,27 @@ const testimonials = [
     src: "/j-gris.webp",
   },
   {
-    quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
+    quote: "Owen rebuilt our brand from scratch in just 48 hours—website, systems, lead flow, everything. The results were sharp, scalable, and immediately effective.",
     name: "Darren Keller",
     designation: "Founder, SB Management",
     src: "/d-kell.webp",
   },
   {
-    quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
+    quote: "Owen sees the big picture, moves fast, and never overlooks the details that make good ideas great.",
     name: "Monica West",
     designation: "Director, Iowa Donor Network",
     src: "/m-west.webp",
   },
   {
-    quote: "Their dedication to creating user-centered designs is evident in every aspect of their work. Truly a pleasure to work with.",
+    quote: "Owen transformed a cumbersome database into an intuitive, user-friendly tool that changed how we operate. His ability to blend design and technical skill is unmatched.",
     name: "Sarah Martinez",
-    designation: "Bright Ideas Co.",
+    designation: "Marketing Director, Behavioral Care Partners",
     src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+    quote: "Owen quickly grasped our vision, elevated it, and delivered a beautifully executed website that perfectly captured our brand.",
     name: "Lisa Thompson",
-    designation: "FutureNet",
+    designation: "Creative Lead, Thompson & Co.",
     src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
 ];
@@ -82,15 +82,21 @@ export const AboutPage = () => {
 
   return (
     <>
-      {/* About Header Section */}
+      {/* About Header Section - Updated */}
       <section className="mt-8 mb-16">
         <div className="flex flex-col md:flex-row gap-12 items-start mb-8">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl font-bold text-neutral-950 dark:text-white mb-2">Hello! I'm Owen</h1>
-            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Creative Technologist</h2>
+            {/* Updated h1 text */}
+            <h1 className="text-3xl sm:text-4xl font-bold text-neutral-950 dark:text-white mb-2">About Me</h1> 
+            {/* Updated h2 text */}
+            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Designer & Developer</h2> 
             
+            {/* Updated description paragraphs */}
+            <p className="text-gray-600 dark:text-neutral-400 text-base mb-4">
+              I'm a designer and developer focused on making things clear, practical, and effective. Since graduating, I've dedicated myself to continuously learning and building solutions that genuinely work—whether it's crafting brand identities, launching websites in days, or turning cumbersome data into elegant tools.
+            </p>
             <p className="text-gray-600 dark:text-neutral-400 text-base mb-6">
-              I build websites, brands, and systems from the ground up. My work spans design, development, messaging, and just about anything else you can think of. I'm self-taught, fast-moving, and focused on making things that actually work.
+              My work combines strategy, technical know-how, and intuitive design. Every project is built not just to look good but to function flawlessly in real-world conditions. I thrive in fast-paced environments where adaptability and clarity matter most, delivering tangible results that clients can see and feel immediately.
             </p>
           </div>
           
@@ -135,7 +141,7 @@ export const AboutPage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+            I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
           </p>
         </div>
 

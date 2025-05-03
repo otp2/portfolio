@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { ArrowLeftIcon, MailIcon, PhoneIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "../components/ui/button";
@@ -27,37 +27,35 @@ export const BcpProjectPage = () => {
         {/* Using prose class for similar typography styling */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
           {/* Project Title/Header */}
-          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-8">
-            Transformed a 2,000-row spreadsheet into a scalable mental health provider search tool built for clarity, speed, and real-time updates
+          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-2">
+            124-column Excel file to live database
           </h1>
+          <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8">January 2025</p>
           
           {/* Project Description */}
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            Behavioral Care Partners was publishing a 124-column spreadsheet of mental health providers as a PDF. It was dense, impossible to search, and disconnected from the actual experience people needed when looking for care.
+            Transformed a dense 2,000-row spreadsheet into a clean, fast, scalable provider-search tool built for real people looking for mental health care.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            I worked directly with their leadership and admin teams to understand how the old file was being used—what mattered most, what filters people needed, and how to translate those functions into something usable. From there, I built a fully searchable, filterable provider directory backed by Supabase.
+            Behavioral Care Partners previously published a huge PDF spreadsheet that was impossible to navigate. I collaborated directly with their leadership to pinpoint critical user needs—location filtering, provider specialties, demographics, and more.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            The system ingests raw spreadsheet data and runs it through a custom pipeline I wrote using SQL functions, triggers, and table logic. Once processed, provider info is live on the site—searchable by location, specialty, age group, language, and more. It's fast, accurate, and designed for internal teams to manage without technical help.
+            From scratch, I built a streamlined search tool powered by Supabase. My custom backend processes raw Excel data using SQL functions, triggers, and logic I designed. Provider information is instantly accessible on the website through an intuitive interface—no tech support needed.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-8">
-            This project pushed me to build a real backend pipeline from scratch, structure relational data for scale, and think like a product strategist inside a healthcare org. It also taught me how to match institutional workflows with modern frontend systems without overcomplicating the stack.
+            This project challenged me to develop robust backend architecture, handle complex data relationships, and align modern tech with real-world institutional needs.
           </p>
 
           {/* Stack Used Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack used</h2>
+            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li className="text-neutral-800 dark:text-neutral-200">Supabase</li>
-              <li className="text-neutral-800 dark:text-neutral-200">PostgreSQL triggers and functions</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Custom SQL cleaning and mapping</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Tailored filter logic and UI components</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Javascript</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Typescript</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Tailwind</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Structured provider taxonomy schema</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Automated data sync from spreadsheet to site</li>
+              <li className="text-neutral-800 dark:text-neutral-200">PostgreSQL (triggers, custom functions)</li>
+              <li className="text-neutral-800 dark:text-neutral-200">SQL data cleaning and mapping</li>
+              <li className="text-neutral-800 dark:text-neutral-200">React, JavaScript, TypeScript</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Tailwind CSS</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Automated data pipeline</li>
             </ul>
           </div>
 
@@ -68,9 +66,9 @@ export const BcpProjectPage = () => {
                href="https://behavioralcarepartners.com/find-provider" 
                target="_blank" 
                rel="noopener noreferrer"
-               className="text-[#ad9c5f] hover:underline break-words" 
+               className="text-[#ad9c5f] hover:underline font-medium inline-flex items-center gap-1.5 break-words"
              >
-               https://behavioralcarepartners.com/find-provider
+               https://behavioralcarepartners.com/find-provider <ArrowRightIcon className="w-3.5 h-3.5 flex-shrink-0" />
              </a>
           </div>
 
@@ -82,7 +80,7 @@ export const BcpProjectPage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+            I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
           </p>
         </div>
 

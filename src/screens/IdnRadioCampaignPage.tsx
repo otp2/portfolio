@@ -28,27 +28,33 @@ export const IdnRadioCampaignPage = () => {
       <article className="mb-16">
         {/* Using prose class */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
-          {/* Project Title/Header */}
-          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-8">
-            Wrote, produced, and launched a Spanish-language radio campaign targeting Hispanic communities across Iowa
+          {/* Project Title/Header - Updated */}
+          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-2">
+            Spanish Radio Ad Campaign
           </h1>
+          {/* Adjusted Date format */}
+          <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8">April 2024</p>
           
-          {/* Project Description */}
+          {/* Project Description - Updated */}
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            I created and ran a 30-day Spanish-language radio campaign for Iowa Donor Network, focused on reaching Hispanic communities across key markets in the state. I led every part of the process—writing and recording the ad, researching demographic targets, and handling media buying directly through iHeartRadio.
+            Planned, wrote, and produced a targeted Spanish-language radio ad campaign for the Iowa Donor Network, strategically engaging Hispanic communities statewide.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            I wrote the ad in Spanish—finally putting a decade of classes to good use. I handled production, booked airtime, and coordinated the full run across iHeartRadio stations. I researched demographic and language data to identify where Spanish-language messaging would have the most impact, and aligned placements with the broader campaign strategy to hit the right markets.
+            Leveraging deep research into local demographics and language preferences, I created impactful Spanish-language messaging. I managed every aspect—copywriting, audio production, media placement through iHeartRadio—and aligned the campaign seamlessly with broader organizational goals.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 mb-8">
+            This campaign allowed me to combine strategic thinking, targeted demographic research, and hands-on creative production to deliver measurable impact in key regional markets.
           </p>
 
-          {/* Stack Used Section */}
+          {/* Stack Used Section - Updated */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack used</h2>
+            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li className="text-neutral-800 dark:text-neutral-200">iHeartRadio (media placement)</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Adobe Audition (voice + editing)</li>
-              <li className="text-neutral-800 dark:text-neutral-200">U.S. Census + regional audience research</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Spanish copywriting and audio production</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Adobe Audition (audio production)</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Regional demographic targeting (U.S. Census data)</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Spanish-language copywriting</li>
+              {/* Removed items not in new list */}
             </ul>
           </div>
         </div>
@@ -68,11 +74,11 @@ export const IdnRadioCampaignPage = () => {
       </article>
       
       {/* Contact Section (Optional - can keep or remove) */}
-      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 mb-6 shadow-sm">
+      <section className="bg-white dark:bg-[#222222] rounded-lg border border-neutral-200 dark:border-[#333333] p-8 shadow-sm">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+            I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
           </p>
         </div>
 

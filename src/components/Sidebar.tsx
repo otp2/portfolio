@@ -32,7 +32,7 @@ export const Sidebar = ({ isMobile, isMenuOpen }: SidebarProps) => {
           </Avatar>
           <div>
             <h3 className="font-semibold text-sm text-neutral-800 dark:text-white">Owen Pechous</h3>
-            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Creative Technologist</p>
+            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Designer & Developer</p>
           </div>
         </div>
 

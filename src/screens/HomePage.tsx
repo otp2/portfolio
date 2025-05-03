@@ -92,27 +92,27 @@ const testimonials = [
     src: "/j-gris.webp",
   },
   {
-    quote: "Owen rebuilt our brand from the ground up in 48 hours—site, systems, lead flow, everything. What he delivered was sharp, scalable, and already working harder than we expected.",
+    quote: "Owen rebuilt our brand from scratch in just 48 hours—website, systems, lead flow, everything. The results were sharp, scalable, and immediately effective.",
     name: "Darren Keller",
     designation: "Founder, SB Management",
     src: "/d-kell.webp",
   },
   {
-    quote: "Owen sees the full picture, moves fast, and never misses the details that make ideas land with meaning.",
+    quote: "Owen sees the big picture, moves fast, and never overlooks the details that make good ideas great.",
     name: "Monica West",
     designation: "Director, Iowa Donor Network",
     src: "/m-west.webp",
   },
   {
-    quote: "Their dedication to creating user-centered designs is evident in every aspect of their work. Truly a pleasure to work with.",
+    quote: "Owen transformed a cumbersome database into an intuitive, user-friendly tool that changed how we operate. His ability to blend design and technical skill is unmatched.",
     name: "Sarah Martinez",
-    designation: "Bright Ideas Co.",
+    designation: "Marketing Director, Behavioral Care Partners",
     src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
   {
-    quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+    quote: "Owen quickly grasped our vision, elevated it, and delivered a beautifully executed website that perfectly captured our brand.",
     name: "Lisa Thompson",
-    designation: "FutureNet",
+    designation: "Creative Lead, Thompson & Co.",
     src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3",
   },
 ];
@@ -159,13 +159,13 @@ export const HomePage = () => {
       <section className="mt-8 mb-16">
         <div className="flex justify-between items-start mb-6">
           <div className="w-full">
-            <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Hello! I'm Owen</h1>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#ad9c5f] leading-tight">Creative Technologist</h2>
+            <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white leading-tight mb-1">Owen Pechous</h1>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-[#ad9c5f] leading-tight">Developer & Designer</h2>
           </div>
         </div>
 
         <p className="text-gray-600 dark:text-neutral-400 text-lg mb-8 max-w-3xl">
-          I build websites, brands, and systems from the ground up. My work spans design, development, messaging, and just about anything else you can think of. I'm self-taught, fast-moving, and focused on making things that actually work.
+          I build websites, brands, and systems—from concept to launch. My approach blends design, code, clear messaging, and real-world strategy. Self-taught, fast-paced, and committed to creating solutions that genuinely work.
         </p>
 
         <div className="flex gap-4">
@@ -197,7 +197,7 @@ export const HomePage = () => {
       </section>
 
       {/* Selected Work Section - Controls moved below */}
-      <section className="mb-8">
+      <section className="mb-16">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white">Selected Work</h2>
           {/* REMOVED Controls from header */}
@@ -291,7 +291,7 @@ export const HomePage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+            I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
           </p>
         </div>
 

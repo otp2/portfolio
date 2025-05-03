@@ -37,9 +37,9 @@ export const ProjectsPage = () => {
   return (
     <>
       <header className="mt-8 mb-16">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Things I've built that actually shipped</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-3">Things I've built that shipped</h1>
         <p className="text-gray-600 dark:text-neutral-400 text-lg">
-          Design, code, automation, systems, and more
+          Design, development, automation, branding, and more.
         </p>
       </header>
 

@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { ArrowLeftIcon, MailIcon, PhoneIcon, ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "../components/ui/button";
@@ -32,42 +32,46 @@ export const ProjectDetailPage = () => {
         {/* Using prose class for similar typography styling to blog posts */}
         <div className="prose prose-lg dark:prose-invert max-w-none">
           {/* Project Title/Header */}
-          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-8">
-            Built a full brand and lead-gen site for a financial services business from zero in one weekend
+          <h1 className="text-3xl sm:text-4xl font-semibold text-neutral-950 dark:text-white mb-2">
+             Brand and Lead-gen Site in 48 Hours
           </h1>
+          {/* Adjusted Date format */}
+          <p className="text-lg text-neutral-500 dark:text-neutral-400 mb-8">March 2025</p>
           
           {/* Project Description */}
           <p className="text-neutral-800 dark:text-neutral-200 mb-6">
-            SB Management had no digital presence and needed to look legit fast. I created the brand identity from scratch, designed the full site experience, and built it with Next.js and React. Every component is custom but still fast to edit. I set up lead capture using Google Sheets, webhooks, and n8n so the client gets notified instantly when someone submits the form. No backend, no extra tools, just clean automation. Went from nothing to live in under 48 hours.
+            Built a polished brand identity and lead-generation website for SB Management in just one weekend—taking them from zero online presence to full legitimacy overnight.
+          </p>
+          <p className="text-neutral-800 dark:text-neutral-200 mb-6">
+             Designed and coded entirely in Next.js and React, the site features custom-built, easily editable components. For lead capture, I integrated a lightweight yet powerful automation workflow using Google Sheets and n8n. The result was an instantly effective, professional web presence.
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 mb-8">
-            This project forced me to move fast without cutting corners. I leveled up my skills in systems thinking, frontend performance, and API-based automation. It also pushed me to balance speed with design quality and think holistically about how a site communicates trust and value to a cold audience.
+            This high-intensity project enhanced my skills in rapid development, frontend optimization, automation, and strategic design—delivering exceptional quality under intense time constraints.
           </p>
 
           {/* Stack Used Section */}
           <div className="mb-8">
-            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack used</h2>
+            <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Stack</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li className="text-neutral-800 dark:text-neutral-200">Next.js</li>
-              <li className="text-neutral-800 dark:text-neutral-200">React</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Figma</li>
-              <li className="text-neutral-800 dark:text-neutral-200">n8n</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Google Sheets</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Netlify</li>
-              <li className="text-neutral-800 dark:text-neutral-200">Custom webhook routing</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Next.js, React</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Figma (design)</li>
+              <li className="text-neutral-800 dark:text-neutral-200">n8n automation</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Google Sheets (lead capture)</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Netlify hosting</li>
+              <li className="text-neutral-800 dark:text-neutral-200">Custom webhook integration</li>
             </ul>
           </div>
 
-          {/* Live Site Section */}
+          {/* Live Site Section - Reverted link text to full URL */}
           <div className="mb-8">
              <h2 className="text-xl font-semibold text-neutral-950 dark:text-white mb-4">Live site</h2>
              <a 
                href="https://sbmgmt.co" 
                target="_blank" 
                rel="noopener noreferrer"
-               className="text-[#ad9c5f] hover:underline break-words" 
+               className="text-[#ad9c5f] hover:underline font-medium inline-flex items-center gap-1.5 break-words"
              >
-               https://sbmgmt.co
+               https://sbmgmt.co <ArrowRightIcon className="w-3.5 h-3.5 flex-shrink-0" />
              </a>
           </div>
 
@@ -79,7 +83,7 @@ export const ProjectDetailPage = () => {
         <div className="mb-8">
           <h2 className="text-2xl font-semibold text-neutral-950 dark:text-white mb-3">Got questions?</h2>
           <p className="text-neutral-600 dark:text-neutral-400 text-base">
-            Happy to talk shop or help you figure out what to build. Shoot me a message or schedule a call
+            I'm always happy to talk through ideas or help you figure out your next steps. Shoot me a message or schedule a call.
           </p>
         </div>
 
