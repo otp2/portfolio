@@ -1,73 +1,13 @@
 import { ArrowRightIcon } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { blogPosts } from "../lib/blogData"; // Import the blog data
 
 // Mock data for blog posts - Reordered by date (newest first)
+/* Remove this local definition
 const blogPosts = [
-  // 1. (ID 2) May 1, 2025
-  {
-    id: 2,
-    slug: "airtable-ai-to-gpt4-supabase",
-    title: "From Airtable AI to Custom GPT-4 & Supabase Integration: Why and How I Made the Switch",
-    date: "May 1, 2025",
-    excerpt: "How hitting limitations with Airtable's AI pushed me to build a more powerful, affordable solution.",
-    image: "/link---figure---how-ai-is-transforming-software-development.png",
-    author: "Owen Pechous"
-  },
-  // 2. (ID 4) March 24, 2025
-  {
-    id: 4,
-    slug: "client-requests-to-roadmaps",
-    title: "Turning Messy Client Requests into Clear Project Roadmaps",
-    date: "March 24, 2025",
-    excerpt: "A practical method for translating ambiguous client ideas into structured, achievable outcomes.",
-    image: "/link---figure---how-ai-is-transforming-software-development.png",
-    author: "Owen Pechous"
-  },
-  // 3. (ID 1) Dec 30, 2024
-  {
-    id: 1,
-    slug: "never-stop-learning",
-    title: "Never Stop Learning: Why Graduation Shouldn't Be the Finish Line",
-    date: "December 30, 2024",
-    excerpt: "A year after graduating taught me more about learning than four years of college ever did.",
-    image: "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
-    author: "Owen Pechous"
-  },
-  // 4. (ID 3) Nov 16, 2024
-  {
-    id: 3,
-    slug: "developer-branding-advantage",
-    title: "Why Every Developer Should Understand Branding (And Vice Versa)",
-    date: "November 16, 2024",
-    excerpt: "The unexpected advantage of combining design, development, and strategic messaging skills.",
-    image: "/link---figure---top-5-programming-languages-for-2024.png",
-    author: "Owen Pechous"
-  },
-  // 5. (ID 5) Sept 18, 2024
-  {
-    id: 5,
-    slug: "mastering-web-frameworks-guide",
-    title: "The Beginner's Guide to Mastering Modern Web Frameworks",
-    date: "September 18, 2024",
-    excerpt: "Practical insights into quickly learning React, Next.js, and Tailwind for efficient frontend work.",
-    image: "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
-    author: "Owen Pechous"
-  },
-  // Removing the post with id: 6
-  /*
-  {
-    id: 6,
-    slug: "rise-of-edge-computing-2024",
-    title: "The Rise of Edge Computing in 2024",
-    date: "August 25, 2024",
-    excerpt: "How edge computing is revolutionizing data processing and improving application performance.",
-    image: "/link---figure---how-ai-is-transforming-software-development.png",
-    author: "Toby Belhome"
-  }
-  */
+  // ... (entire array definition)
 ];
+*/
 
 export const BlogPage = () => {
   return (
@@ -112,7 +52,7 @@ export const BlogPage = () => {
                   <img 
                     src={post.image} 
                     alt={post.title}
-                    className="w-full h-48 object-cover rounded-lg"
+                    className="w-full aspect-video md:h-48 object-cover rounded-lg"
                   />
                 </Link>
               </div>

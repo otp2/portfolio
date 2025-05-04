@@ -11,7 +11,7 @@ Built with React, TypeScript, Tailwind CSS, and Shadcn UI components, featuring 
 - **Component-Based**: Built with reusable React components using Shadcn UI
 - **Project Showcase**: Displays selected work with refined details and individual project pages
 - **Animated Testimonials**: Interactive display of client feedback (with responsive styling and updated content)
-- **Blog Integration**: Features a blog page with post previews and individual article pages (content updated).
+- **Blog Integration**: Features a blog page with post previews and individual article pages using custom SVG featured images. Blog data is centralized for consistency.
 - **Netlify Forms**: Integrated contact form submission
 
 ## Tech Stack
@@ -52,6 +52,7 @@ portfolio/
 ├── public/          # Static assets
 ├── src/
 │   ├── components/  # Reusable UI components
+│   ├── lib/         # Shared utilities and data (e.g., blog posts)
 │   ├── screens/     # Page-level components
 │   ├── App.tsx      # Main application component
 │   └── index.tsx    # Application entry point
