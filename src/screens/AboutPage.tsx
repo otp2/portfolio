@@ -2,9 +2,8 @@ import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
 import { 
   MailIcon, 
   PhoneIcon,
-  CodeIcon,
-  PaintbrushIcon,
-  PaletteIcon,
+  // CodeIcon, // Remove if unused
+  // PaletteIcon, // Remove if unused
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 
@@ -14,19 +13,19 @@ const services = [
     id: 1,
     title: "Design",
     price: "90",
-    icon: <PaintbrushIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">brand_family</span>,
   },
   {
     id: 2,
     title: "Development",
     price: "90",
-    icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">code</span>,
   },
   {
     id: 3,
     title: "Strategy",
     price: "80",
-    icon: <PaletteIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">automation</span>,
   },
 ];
 
@@ -107,8 +106,8 @@ export const AboutPage = () => {
               </div>
               <div className="flex items-center text-sm">
                 <span className="text-neutral-500 dark:text-neutral-400 mr-1">from</span>
-                <span className="text-neutral-950 dark:text-white font-medium mr-1">${service.price}</span>
-                <span className="text-neutral-500 dark:text-neutral-400">per hour</span>
+                <span className="text-neutral-950 dark:text-white font-medium">${service.price}</span>
+                <span className="text-neutral-500 dark:text-neutral-400">/hr</span>
               </div>
             </div>
           ))}

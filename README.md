@@ -1,6 +1,6 @@
 # Owen Pechous Portfolio
 
-A modern, responsive portfolio website showcasing Owen Pechous's work as a Creative Technologist.
+A modern, responsive portfolio website showcasing Owen Pechous's work as a Developer & Designer.
 
 Built with React, TypeScript, Tailwind CSS, and Shadcn UI components, featuring project showcases, client testimonials, blog integration, and a functional contact form.
 
@@ -13,6 +13,9 @@ Built with React, TypeScript, Tailwind CSS, and Shadcn UI components, featuring 
 - **Animated Testimonials**: Interactive display of client feedback (with responsive styling and updated content)
 - **Blog Integration**: Features a blog page with post previews and individual article pages using custom SVG featured images. Blog data is centralized for consistency.
 - **Netlify Forms**: Integrated contact form submission
+- **Lucide Icons**: Simple, clean SVG icons (Partially replaced by Material Symbols)
+- **Google Material Symbols**: Used for service icons via web font.
+- **Google Fonts**: Using Figtree (sans-serif) and Brawler (serif)
 
 ## Tech Stack
 
@@ -21,8 +24,6 @@ Built with React, TypeScript, Tailwind CSS, and Shadcn UI components, featuring 
 - **Tailwind CSS**: Utility-first CSS framework for rapid styling
 - **Vite**: Next-generation frontend tooling for fast development
 - **React Router**: For page navigation and routing
-- **Lucide Icons**: Simple, clean SVG icons
-- **Google Fonts**: Using Figtree (sans-serif) and Brawler (serif)
 
 ## Getting Started
 

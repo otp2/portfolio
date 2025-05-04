@@ -1,10 +1,7 @@
 import { 
   ArrowLeft,
   ArrowRight,
-  CodeIcon,
   MailIcon,
-  PackageIcon,
-  GlobeIcon,
   PhoneIcon,
   CalendarDaysIcon,
 } from "lucide-react";
@@ -67,19 +64,19 @@ const services = [
     id: 1,
     title: "Design",
     price: "90",
-    icon: <PackageIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">brand_family</span>,
   },
   {
     id: 2,
     title: "Development",
     price: "90",
-    icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">code</span>,
   },
   {
     id: 3,
     title: "Strategy",
     price: "80",
-    icon: <GlobeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
+    icon: <span className="material-symbols-outlined flex items-center justify-center text-xl text-neutral-950 dark:text-[#ad9c5f]">automation</span>,
   },
 ];
 
@@ -179,7 +176,7 @@ export const HomePage = () => {
 
           <Button
             variant="outline"
-            className="h-12 flex items-center gap-2 text-sm font-medium border border-neutral-200 dark:border-[#222222] dark:bg-transparent dark:text-white rounded-lg"
+            className="h-12 flex items-center gap-2 text-sm font-medium border border-neutral-200 dark:border-[#222222] dark:bg-transparent dark:text-white dark:hover:bg-transparent dark:hover:border-[#ad9c5f] rounded-lg transition-colors duration-200"
             asChild
           >
             <a
@@ -242,8 +239,8 @@ export const HomePage = () => {
               </div>
               <div className="flex items-center text-sm">
                 <span className="text-neutral-500 dark:text-neutral-400 mr-1">from</span>
-                <span className="text-neutral-950 dark:text-white font-medium mr-1">${service.price}</span>
-                <span className="text-neutral-500 dark:text-neutral-400">per hour</span>
+                <span className="text-neutral-950 dark:text-white font-medium">${service.price}</span>
+                <span className="text-neutral-500 dark:text-neutral-400">/hr</span>
               </div>
             </div>
           ))}
