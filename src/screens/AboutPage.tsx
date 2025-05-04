@@ -84,9 +84,13 @@ export const AboutPage = () => {
             </p>
           </div>
           
-          <div className="flex-shrink-0 md:w-[350px]">
-            <div className="w-full h-[350px] bg-neutral-200 dark:bg-neutral-800 rounded-lg">
-            </div>
+          <div className="flex-shrink-0 md:w-[315px]">
+            {/* Replaced placeholder div with img tag */}
+            <img 
+              src="/o-pech.png" 
+              alt="Owen Pechous profile picture" 
+              className="w-full h-auto rounded-lg" 
+            />
           </div>
         </div>
       </section>
