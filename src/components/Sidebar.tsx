@@ -31,8 +31,8 @@ export const Sidebar = ({ isMobile, isMenuOpen }: SidebarProps) => {
             <AvatarFallback>OP</AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-semibold text-sm text-neutral-800 dark:text-white">Owen Pechous</h3>
-            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Designer & Developer</p>
+            <h2 className="text-sm font-semibold text-neutral-950 dark:text-white">Owen Pechous</h2>
+            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">Developer & Designer</p>
           </div>
         </div>
 

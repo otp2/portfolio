@@ -1,36 +1,30 @@
-import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
+import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
 import { 
-  FileTextIcon, 
-  ClipboardCopyIcon, 
   MailIcon, 
   PhoneIcon,
   CodeIcon,
   PaintbrushIcon,
   PaletteIcon,
 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
+import { Button } from "../components/ui/button";
 
 // Data for services
 const services = [
   {
     id: 1,
-    title: "Product Design",
+    title: "Design",
     price: "90",
     icon: <PaintbrushIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {
     id: 2,
-    title: "Frontend Development",
+    title: "Development",
     price: "90",
     icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {
     id: 3,
-    title: "Branding",
+    title: "Strategy",
     price: "80",
     icon: <PaletteIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
@@ -71,15 +65,6 @@ const testimonials = [
 ];
 
 export const AboutPage = () => {
-  const [copySuccess, setCopySuccess] = useState(false);
-  
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("owenpechous@gmail.com").then(() => {
-      setCopySuccess(true);
-      setTimeout(() => setCopySuccess(false), 2000);
-    });
-  };
-
   return (
     <>
       {/* About Header Section - Updated */}
@@ -89,7 +74,7 @@ export const AboutPage = () => {
             {/* Updated h1 text */}
             <h1 className="text-3xl sm:text-4xl font-bold text-neutral-950 dark:text-white mb-2">About Me</h1> 
             {/* Updated h2 text */}
-            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Designer & Developer</h2> 
+            <h2 className="text-2xl font-semibold text-[#ad9c5f] mb-6">Developer & Designer</h2> 
             
             {/* Updated description paragraphs */}
             <p className="text-gray-600 dark:text-neutral-400 text-base mb-4">

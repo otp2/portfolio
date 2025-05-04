@@ -65,19 +65,19 @@ const extendedCarouselSlides = [
 const services = [
   {
     id: 1,
-    title: "Product Design",
+    title: "Design",
     price: "90",
     icon: <PackageIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {
     id: 2,
-    title: "Frontend Development",
+    title: "Development",
     price: "90",
     icon: <CodeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
   {
     id: 3,
-    title: "Branding",
+    title: "Strategy",
     price: "80",
     icon: <GlobeIcon className="w-5 h-5 text-neutral-950 dark:text-white" />,
   },
