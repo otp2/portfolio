@@ -12,17 +12,17 @@ const allProjects = [
   },
   {
     id: 2,
+    title: "UniFest Ticketing Platform",
+    period: "May 2025",
+    image: "/unifest-port-img.png",
+    url: "/projects/unifest",
+  },
+  {
+    id: 3,
     title: "Site and Lead System Built in 48h",
     period: "March 2025",
     image: "/sbmgmt-port-img-1.png",
     url: "/projects/sb-management",
-  },
-  {
-    id: 3,
-    title: "Mobile Banking App",
-    period: "2023 - 2025",
-    image: "/figure---modern-e-commerce-platform.png", // Placeholder image
-    url: "https://google.com",
   },
   {
     id: 4,

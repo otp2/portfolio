@@ -11,7 +11,7 @@ export const MobileHeader = ({ isMenuOpen, setIsMenuOpen }: MobileHeaderProps) =
       <div className="flex items-center overflow-hidden">
         <div className={`flex items-center transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full absolute'}`}>
           <Avatar className="w-10 h-10 mr-3">
-            <AvatarImage src="/01-png.png" alt="Owen Pechous" />
+            <AvatarImage src="/avatar-image.svg" alt="Owen Pechous" />
             <AvatarFallback>OP</AvatarFallback>
           </Avatar>
           <div>

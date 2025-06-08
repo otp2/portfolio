@@ -170,7 +170,7 @@ export const Container = (): JSX.Element => {
         ${isMobile ? (isMenuOpen ? 'translate-x-0' : '-translate-x-full') : ''}`}>
           <div className="flex items-center gap-3 mb-8">
             <Avatar className="w-10 h-10">
-              <AvatarImage src="/01-png.png" alt="Owen Pechous" />
+              <AvatarImage src="/avatar-image.svg" alt="Owen Pechous" />
               <AvatarFallback>OP</AvatarFallback>
             </Avatar>
             <div>
@@ -245,7 +245,7 @@ export const Container = (): JSX.Element => {
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center">
                 <Avatar className="w-10 h-10 mr-3">
-                  <AvatarImage src="/01-png.png" alt="Owen Pechous" />
+                  <AvatarImage src="/avatar-image.svg" alt="Owen Pechous" />
                   <AvatarFallback>OP</AvatarFallback>
                 </Avatar>
                 <div>

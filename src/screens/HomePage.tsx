@@ -23,10 +23,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Site and Lead System Built in 48h",
-    period: "March 2025",
-    image: "/sbmgmt-port-img-1.png",
-    url: "/projects/sb-management",
+    title: "UniFest Ticketing Platform",
+    period: "May 2025",
+    image: "/unifest-port-img.png",
+    url: "/projects/unifest",
   },
 ];
 
@@ -43,11 +43,11 @@ const carouselSlides = projects.map(project => ({
 const extendedCarouselSlides = [
   ...carouselSlides.map(slide => ({ ...slide })),
   {
-    title: "Mobile Banking App",
+    title: "Site and Lead System Built in 48h",
     button: "View Project",
-    period: "2023 - 2024",
-    src: "https://images.unsplash.com/photo-1590041794748-2d8eb73a571c?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3",
-    url: "https://google.com"
+    period: "March 2025",
+    src: "/sbmgmt-port-img-1.png",
+    url: "/projects/sb-management"
   },
   {
     title: "Spanish Radio Ad Campaign",
@@ -83,34 +83,34 @@ const services = [
 // Data for testimonials formatted for AnimatedTestimonials component
 const testimonials = [
   {
-    quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
+    quote: "Owen's strategic clarity and creative execution consistently produce exceptional results. His attention to detail and ability to deliver polished, engaging solutions stand out, even among seasoned professionals.",
     name: "Jeffrey Grisamore",
-    designation: "CEO, EGR International",
-    src: "/j-gris.webp",
+    designation: "President & CEO, EGR International & BlackLab Media",
+    src: "/j-grisamore.png",
   },
   {
-    quote: "Owen rebuilt our brand from scratch in just 48 hours—website, systems, lead flow, everything. The results were sharp, scalable, and immediately effective.",
-    name: "Darren Keller",
-    designation: "Founder, SB Management",
-    src: "/d-kell.webp",
+    quote: "Owen's marketing insights and digital strategies have significantly elevated our outreach efforts. His creativity and precision have directly improved our community engagement and impact.",
+    name: "Anne Casey",
+    designation: "Manager, Community Affairs & Development, Iowa Donor Network",
+    src: "/a-casey.png",
   },
   {
-    quote: "Owen sees the big picture, moves fast, and never overlooks the details that make good ideas great.",
-    name: "Monica West",
-    designation: "Director, Iowa Donor Network",
-    src: "/m-west.webp",
+    quote: "Owen expertly blends creativity with practical strategy, demonstrating a rare talent for turning complex ideas into clear, compelling results. His work consistently exceeds professional standards.",
+    name: "Adam Kempenaar",
+    designation: "Professor of Practice, University of Iowa | Former VP, Chicago Blackhawks",
+    src: "/a-kemp.png",
   },
   {
-    quote: "Owen transformed a cumbersome database into an intuitive, user-friendly tool that changed how we operate. His ability to blend design and technical skill is unmatched.",
-    name: "Sarah Martinez",
-    designation: "Marketing Director, Behavioral Care Partners",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3",
+    quote: "Working with Owen reveals his sharp, strategic mindset and outstanding ability to effectively communicate complex ideas. His thoughtful approach consistently enhances clarity and impact.",
+    name: "Munachim Amah",
+    designation: "Managing Editor, Journal of Communication Inquiry | Former CNN Journalist",
+    src: "/m-chim.png",
   },
   {
-    quote: "Owen quickly grasped our vision, elevated it, and delivered a beautifully executed website that perfectly captured our brand.",
-    name: "Lisa Thompson",
-    designation: "Creative Lead, Thompson & Co.",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3",
+    quote: "Owen rebuilt our entire brand quickly and precisely. His strategic vision and ability to deliver immediate, measurable outcomes transformed our digital presence and operational effectiveness.",
+    name: "Matthew Sutter",
+    designation: "Co-Founder, SB Management Group",
+    src: "/m-sutt.png",
   },
 ];
 
@@ -121,7 +121,6 @@ const blogPosts = [
     id: 2,
     title: "From Airtable AI to Custom GPT-4 & Supabase Integration: Why and How I Made the Switch",
     date: "May 1, 2025",
-    image: "/link---figure---how-ai-is-transforming-software-development.png",
     slug: "airtable-ai-to-gpt4-supabase",
     author: "Owen Pechous",
   },
@@ -130,7 +129,6 @@ const blogPosts = [
     id: 4,
     title: "Turning Messy Client Requests into Clear Project Roadmaps",
     date: "March 24, 2025",
-    image: "/link---figure---how-ai-is-transforming-software-development.png", // This image is now used twice in the top 3 previews
     slug: "client-requests-to-roadmaps",
     author: "Owen Pechous"
   },
@@ -139,8 +137,6 @@ const blogPosts = [
     id: 1,
     title: "Never Stop Learning: Why Graduation Shouldn't Be the Finish Line",
     date: "December 30, 2024",
-    image:
-      "/link---figure---the-future-of-javascript--what-s-new-in-es2025-.png",
     slug: "never-stop-learning",
     author: "Owen Pechous",
   },

@@ -1,0 +1,22 @@
+{
+  "name": "Owen Pechous | Developer & Designer",
+  "short_name": "Owen Pechous",
+  "description": "Portfolio of Owen Pechous, a Developer & Designer who builds websites, brands, and systems.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ad9c5f",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+} 

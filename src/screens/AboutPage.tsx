@@ -32,34 +32,34 @@ const services = [
 // Data for testimonials
 const testimonials = [
   {
-    quote: "Owen thinks and builds with precision. Every piece of work—from messaging to execution—carries clarity, intention, and a level of polish you rarely see in someone this early in their career.",
+    quote: "Owen's strategic clarity and creative execution consistently produce exceptional results. His attention to detail and ability to deliver polished, engaging solutions stand out, even among seasoned professionals.",
     name: "Jeffrey Grisamore",
-    designation: "CEO, EGR International",
-    src: "/j-gris.webp",
+    designation: "President & CEO, EGR International & BlackLab Media",
+    src: "/j-grisamore.png",
   },
   {
-    quote: "Owen rebuilt our brand from scratch in just 48 hours—website, systems, lead flow, everything. The results were sharp, scalable, and immediately effective.",
-    name: "Darren Keller",
-    designation: "Founder, SB Management",
-    src: "/d-kell.webp",
+    quote: "Owen's marketing insights and digital strategies have significantly elevated our outreach efforts. His creativity and precision have directly improved our community engagement and impact.",
+    name: "Anne Casey",
+    designation: "Manager, Community Affairs & Development, Iowa Donor Network",
+    src: "/a-casey.png",
   },
   {
-    quote: "Owen sees the big picture, moves fast, and never overlooks the details that make good ideas great.",
-    name: "Monica West",
-    designation: "Director, Iowa Donor Network",
-    src: "/m-west.webp",
+    quote: "Owen expertly blends creativity with practical strategy, demonstrating a rare talent for turning complex ideas into clear, compelling results. His work consistently exceeds professional standards.",
+    name: "Adam Kempenaar",
+    designation: "Professor of Practice, University of Iowa | Former VP, Chicago Blackhawks",
+    src: "/a-kemp.png",
   },
   {
-    quote: "Owen transformed a cumbersome database into an intuitive, user-friendly tool that changed how we operate. His ability to blend design and technical skill is unmatched.",
-    name: "Sarah Martinez",
-    designation: "Marketing Director, Behavioral Care Partners",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3",
+    quote: "Working with Owen reveals his sharp, strategic mindset and outstanding ability to effectively communicate complex ideas. His thoughtful approach consistently enhances clarity and impact.",
+    name: "Munachim Amah",
+    designation: "Managing Editor, Journal of Communication Inquiry | Former CNN Journalist",
+    src: "/m-chim.png",
   },
   {
-    quote: "Owen quickly grasped our vision, elevated it, and delivered a beautifully executed website that perfectly captured our brand.",
-    name: "Lisa Thompson",
-    designation: "Creative Lead, Thompson & Co.",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3",
+    quote: "Owen rebuilt our entire brand quickly and precisely. His strategic vision and ability to deliver immediate, measurable outcomes transformed our digital presence and operational effectiveness.",
+    name: "Matthew Sutter",
+    designation: "Co-Founder, SB Management Group",
+    src: "/m-sutt.png",
   },
 ];
 
@@ -85,9 +85,9 @@ export const AboutPage = () => {
           </div>
           
           <div className="flex-shrink-0 md:w-[315px]">
-            {/* Replaced placeholder div with img tag */}
+            {/* Updated to use new main-image.svg */}
             <img 
-              src="/o-pech.png" 
+              src="/main-image.svg" 
               alt="Owen Pechous profile picture" 
               className="w-full h-auto rounded-lg" 
             />
